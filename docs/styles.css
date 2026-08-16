@@ -203,6 +203,34 @@ main {
   margin-left: 0.4rem;
 }
 
+.rts-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 0.15rem 0.55rem;
+  border-radius: 10px;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+  letter-spacing: 0.02em;
+}
+.rts-reach { background: #b3261e; }
+.rts-target { background: #a15c00; }
+.rts-safety { background: #1a7a1a; }
+
+.rts-divider {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-muted);
+  margin: 1.25rem 0 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid #d1d5db;
+}
+.rts-divider:first-child {
+  margin-top: 0;
+}
+
 .tutoring-note {
   font-size: 0.8rem;
   line-height: 1.4;
