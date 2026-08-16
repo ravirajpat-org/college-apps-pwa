@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>College Apps</title>
+  <meta name="theme-color" content="#2b5797" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>College Apps</h1>
+  </header>
+
+  <main>
+    <section id="password-gate" class="gate">
+      <form id="password-gate-form">
+        <label for="password-input">Enter the family password</label>
+        <input
+          type="password"
+          id="password-input"
+          name="password"
+          autocomplete="current-password"
+          required
+        />
+        <button type="submit">Unlock</button>
+        <p id="gate-error" class="error" hidden></p>
+      </form>
+    </section>
+
+    <section id="dashboard" hidden>
+      <nav class="tab-bar">
+        <button class="tab-btn active" data-panel="instate-panel" type="button">In State</button>
+        <button class="tab-btn" data-panel="outstate-panel" type="button">Out of State</button>
+        <button class="tab-btn" data-panel="threetwo-panel" type="button">3+2</button>
+        <button class="tab-btn" data-panel="international-panel" type="button">International</button>
+      </nav>
+
+      <div id="instate-panel" class="tab-panel">
+        <p class="tutoring-note teacher-intro">
+          Texas schools (in-state tuition) for Sasha's Computer Science / Software
+          Engineering search. Not researched yet.
+        </p>
+        <section class="card">
+          <h2>Not started yet <span class="tutoring-status-badge">TODO</span></h2>
+          <p class="tutoring-note">
+            Candidates to research first: UT Austin, Texas A&amp;M, Rice University.
+          </p>
+        </section>
+      </div>
+
+      <div id="outstate-panel" class="tab-panel" hidden>
+        <p class="tutoring-note teacher-intro">
+          Non-Texas US schools with direct freshman admission (no 3+2 detour, no
+          international affiliation). Not researched yet.
+        </p>
+        <section class="card">
+          <h2>Not started yet <span class="tutoring-status-badge">TODO</span></h2>
+          <p class="tutoring-note">
+            Candidates to research first: Georgia Tech, Purdue, UIUC, University of Michigan.
+          </p>
+        </section>
+      </div>
+
+      <div id="threetwo-panel" class="tab-panel" hidden>
+        <p class="tutoring-note teacher-intro">
+          US-only 3+2 combined-plan programs: 3 years at a liberal arts partner college,
+          then 2 years at an engineering school, ending with two degrees.
+        </p>
+
+        <section class="card">
+          <h2>Columbia Engineering <span class="tutoring-status-badge">Different kind of path</span></h2>
+          <p class="teacher-detail">Combined Plan (3-2) &middot; Fu Foundation School of Engineering and Applied Science, New York &middot; BA + BS, 5 years total</p>
+          <p class="tutoring-note">
+            <strong>This one is not a high-school application target.</strong> She'd apply as a freshman to one of
+            ~100 affiliate liberal-arts partner colleges (e.g. Middlebury, Goucher, Fordham), spend 3 years there,
+            then apply into Columbia Engineering during the <em>winter of her junior year of college</em>. The actual
+            Columbia admission event happens two years after high school, not during it.
+          </p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>Structure</td><td>3 years at the partner college (BA coursework) + 2 years at Columbia Engineering (BS) = two degrees, 5 years total</td></tr>
+              <tr><td>Prerequisite coursework</td><td>Full Calculus sequence (through multivariable/Calc III&ndash;IV), 2&ndash;3 semesters Physics, General Chemistry + one lab, one Computer Science course, Intro Economics, ~27 nontechnical credits &mdash; completed at the partner college</td></tr>
+              <tr><td>GPA to transfer</td><td>~3.0+ minimum overall and in pre-engineering coursework (exact bar varies by partner school &mdash; confirm with the specific affiliate)</td></tr>
+              <tr><td>Application</td><td>Submitted via Columbia's application in winter of junior year of college &middot; opens December, preferred deadline mid-Feb, final mid-March, decisions mid-April, fall entry only</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Prep plan:</strong> the real near-term decision isn't about Columbia at all &mdash; it's picking a
+            strong affiliate partner college as her actual senior-year application target, the same way she'd apply
+            to any other school &middot; once enrolled, front-load Calculus/Physics/Chemistry/CS in the first 3 years
+            to hit the prerequisite list above &middot; keep GPA comfortably above 3.0, ideally 3.3+, since pre-engineering
+            coursework GPA is weighted separately and scrutinized &middot; get the exact affiliate list and
+            partner-specific terms from Columbia Engineering's Combined Plan office once a shortlist of colleges forms.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Combined Plan Affiliate Ranking <span class="tutoring-status-badge">Sticker price, not net price</span></h2>
+          <p class="tutoring-note">
+            20-school shortlist from the ~90 official affiliates, weighted 50% reputation / 50% sticker price (equal
+            weighting as decided) &mdash; <strong>ranked on sticker price, not net price</strong>, since our family
+            income is unlikely to qualify for meaningful need-based aid. Reputation score is a judgment-based tier
+            (1=most selective/prestigious, 4=least), not an official ranking.
+          </p>
+          <div class="table-scroll">
+            <table class="tutoring-table">
+              <thead><tr><th>Rank</th><th>School</th><th>Tier</th><th>Sticker/yr</th><th>Merit aid</th><th>Weighted score</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>SUNY Binghamton</td><td>2 (public)</td><td>$51,256</td><td>Limited (President's/Provost's/Dean's, up to ~$10k/yr, competitive)</td><td>83.3</td></tr>
+                <tr><td>2</td><td>Sweet Briar</td><td>4</td><td>$45,890</td><td>Strong &mdash; automatic consideration + named full-tuition awards</td><td>73.5</td></tr>
+                <tr><td>3</td><td>William &amp; Mary</td><td>2 (public)</td><td>$70,730</td><td>Limited, primarily need-based (out-of-state)</td><td>70.8</td></tr>
+                <tr><td>4</td><td>Wells</td><td>4</td><td>$52,466</td><td>Strong &mdash; 97% of students get aid, avg ~$26,625</td><td>67.3</td></tr>
+                <tr><td>5</td><td>Centenary</td><td>4</td><td>$60,960</td><td>Strong &mdash; wide range of merit scholarships</td><td>60.8</td></tr>
+                <tr><td>6</td><td>Bowdoin</td><td>1</td><td>$88,820</td><td>None &mdash; need-based only, meets 100% need</td><td>59.9</td></tr>
+                <tr><td>7</td><td>Williams</td><td>1</td><td>$95,960</td><td>None &mdash; need-based only</td><td>54.7</td></tr>
+                <tr><td>8</td><td>Oberlin</td><td>2</td><td>$88,784</td><td>Moderate &mdash; $10k Oberlin Commitment to all, up to $25k Midwest Merit</td><td>54.0</td></tr>
+                <tr><td>9</td><td>Georgetown</td><td>1</td><td>~$96,500</td><td>None &mdash; need-based only</td><td>52.2</td></tr>
+                <tr><td>10</td><td>Reed</td><td>2</td><td>$91,048</td><td>None &mdash; explicitly no merit aid, need-based only</td><td>51.5</td></tr>
+                <tr><td>11</td><td>Colgate</td><td>1</td><td>~$96,500*</td><td>None &mdash; need-based only</td><td>50.7</td></tr>
+                <tr><td>12</td><td>Colby</td><td>1</td><td>~$96,600</td><td>None &mdash; need-based only</td><td>50.6</td></tr>
+                <tr><td>13</td><td>Muhlenberg</td><td>3</td><td>$81,003</td><td>Strong &mdash; avg ~$27,376</td><td>50.3</td></tr>
+                <tr><td>14</td><td>American</td><td>3</td><td>$82,780</td><td>Not verified &mdash; confirm directly</td><td>50.2</td></tr>
+                <tr><td>15</td><td>Richmond</td><td>2</td><td>~$90,500</td><td>Strong &mdash; Richmond Scholars (full ride), Presidential (1/3 tuition)</td><td>50.0</td></tr>
+                <tr><td>16</td><td>Loyola Maryland</td><td>4</td><td>$81,750</td><td>Very strong &mdash; award range $33,000&ndash;$39,000/yr</td><td>46.1</td></tr>
+                <tr><td>17</td><td>Bard*</td><td>3</td><td>~$88,238</td><td>Not verified &mdash; confirm directly</td><td>46.0</td></tr>
+                <tr><td>18</td><td>Denison</td><td>2</td><td>$96,900</td><td>Moderate &mdash; avg ~$19,149</td><td>45.4</td></tr>
+                <tr><td>19</td><td>Barnard</td><td>1</td><td>$103,000</td><td>None &mdash; need-based only</td><td>45.0</td></tr>
+                <tr><td>20</td><td>Fordham</td><td>3</td><td>$93,168</td><td>Strong &mdash; 2 full-tuition scholarships + Loyola Scholarship $1k&ndash;$12.5k</td><td>42.6</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tutoring-note">
+            *Colgate's sticker is a partial-data estimate; Bard's is 2025 data not yet confirmed for 2026-27 &mdash; both
+            worth re-checking before relying on them.
+          </p>
+          <p class="tutoring-note">
+            <strong>Reading this for our situation:</strong> since need-based aid won't apply, the six Tier 1
+            need-based-only schools (Bowdoin, Williams, Georgetown, Colgate, Colby, Barnard) are effectively
+            full-sticker-price propositions for us &mdash; their rank here is close to the real number. The merit-heavy
+            schools (Sweet Briar, Wells, Centenary, Muhlenberg, Richmond, Loyola Maryland, Fordham) are where a strong
+            applicant's actual price could drop meaningfully <em>below</em> what's shown, since merit aid isn't
+            income-tested. Re-run this with updated numbers once she has an actual shortlist &mdash; merit awards and
+            sticker prices both shift year to year.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Other 3+2 Sponsor Schools <span class="tutoring-status-badge">Landscape scan, not yet built out</span></h2>
+          <p class="tutoring-note">
+            Columbia isn't the only 3+2 sponsor. Quick landscape from research so far &mdash; none of these have full
+            cards yet, flag if any should be built out next.
+          </p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>Caltech</td><td>13 partner LACs (small network) &middot; 1&ndash;2 yrs calc-based physics/math, multivariable calc, diff eq, 1 yr chem &middot; apply junior year only &middot; ~30&ndash;40% of eligible pool, but very few seats total &mdash; long shot even among reach options</td></tr>
+              <tr><td>Dartmouth (Thayer)</td><td>Ivy League &middot; GPA 3.5+ &middot; apply by Feb 1 of junior year &middot; also offers a longer "2-1-1-1" structure, not just 3-2</td></tr>
+              <tr><td>Georgia Tech</td><td>GPA 3.3 for CS/Engineering (3.0 other majors) + separate Math/Science GPA &middot; top 5&ndash;10 national engineering reputation, most accessible bar of the top-tier brands</td></tr>
+              <tr><td>Case Western Reserve</td><td>40+ partner LACs, widest network after Columbia &middot; specific GPA bar not yet confirmed</td></tr>
+              <tr><td>Washington University (McKelvey)</td><td>GPA 3.25 overall + math/science &middot; often a "3-3" structure (BS+MS, 6 years total), not a straight 5-year 3-2 &mdash; worth noting the extra year</td></tr>
+              <tr><td>Notre Dame</td><td>16+ partner schools, but GPA bar varies widely by specific partner (2.8&ndash;3.6+) since each partnership is separately negotiated</td></tr>
+              <tr><td>RPI / USC</td><td>Listed as 3+2 sponsors but admission-bar specifics not yet researched</td></tr>
+              <tr><td>Duke</td><td><strong>Not a real match</strong> &mdash; Trinity/Pratt is an internal Duke-to-Duke transfer, not an external-partner 3+2</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <div id="international-panel" class="tab-panel" hidden>
+        <p class="tutoring-note teacher-intro">
+          International direct-entry options, plus US-degree programs built around an
+          international partner university.
+        </p>
+
+        <section class="card">
+          <h2>Quick Comparison</h2>
+          <div class="table-scroll">
+            <table class="tutoring-table">
+              <thead><tr><th>College</th><th>What decides admission</th><th>Est. cost (full degree)</th><th>Key deadline</th></tr></thead>
+              <tbody>
+                <tr><td>Monash (Software Eng. Hons)</td><td>GPA + SAT/ACT</td><td>~$218,000 (4 yr)</td><td>Rolling &mdash; apply senior year</td></tr>
+                <tr><td>TU Delft (CS&amp;E)</td><td>Own CST exam + lottery (grades not used)</td><td>~$105,000&ndash;115,000 (3 yr)</td><td>Jan 15, fixed</td></tr>
+                <tr><td>KAIST</td><td>Holistic (essay + transcript + optional tests)</td><td>~$0 tuition (fully funded) + living</td><td>Early Oct 22 / Regular Jan 14</td></tr>
+                <tr><td>Columbia + &Eacute;cole Polytechnique</td><td>Holistic, applied via &Eacute;cole Polytechnique directly</td><td>Polytechnique tuition (~free/EU-subsidized) + Columbia M.Eng cost for 2 yrs</td><td>3 rounds: Oct 30 / Jan 5 / Feb 9</td></tr>
+                <tr><td>UConn Int'l Engineering Program</td><td>Normal UConn freshman admission (much less selective)</td><td>UConn in-state/out-of-state tuition, 5 yrs</td><td>Regular UConn freshman deadline</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tutoring-note">Figures are current as of research in Aug 2026 &mdash; re-verify closer to application time, especially TU Delft's non-EU fee (trending upward) and Monash's ATAR/GPA bar.</p>
+        </section>
+
+        <section class="card">
+          <h2>Monash University <span class="tutoring-status-badge">Rolling admission</span></h2>
+          <p class="teacher-detail">Bachelor of Software Engineering (Honours) &middot; Clayton campus, Melbourne, Australia &middot; 4 years &middot; Engineers Australia accredited</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>GPA</td><td>~3.3&ndash;3.5+ competitive (maps to ATAR 80+ equivalent)</td></tr>
+              <tr><td>Prerequisites</td><td>Mathematics + one of Physics/Chemistry, through senior year</td></tr>
+              <tr><td>SAT/ACT</td><td>Highest of either used &middot; target 1350&ndash;1400+ composite, 700+ on Math</td></tr>
+              <tr><td>English test</td><td>IELTS 6.5 / TOEFL 79 / PTE 58 &mdash; likely waived (US English-medium school), confirm at application</td></tr>
+              <tr><td>Deadline</td><td>No fixed date &mdash; apply direct with predicted grades, confirm with final transcript. Semester 1 (Feb/Mar) start lines up with June graduation.</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Prep plan:</strong> AP Calculus BC + continued Physics/Chemistry through senior year &middot;
+            sit SAT or ACT junior year, aim 1350+ (Math 700+) &middot; keep unweighted GPA 3.5+ &middot;
+            apply direct to Monash (not UAC) senior year.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>TU Delft <span class="tutoring-status-badge">Jan 15 fixed deadline</span></h2>
+          <p class="teacher-detail">BSc Computer Science &amp; Engineering &middot; Delft, Netherlands &middot; 3 years &middot; Numerus fixus (590 seats/yr, 345 English track)</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>Diploma</td><td>Accredited US High School Diploma (ASCWASC, Cognia, MSA-CESS, NEASC, CIS, NCPSA, or state approval)</td></tr>
+              <tr><td>AP exams</td><td>Minimum 4, each scored 3+, must include AP Calculus AB or BC</td></tr>
+              <tr><td>English test</td><td>TOEFL iBT 90+ or IELTS 6.5+ &mdash; confirm if a US-schooling waiver applies</td></tr>
+              <tr><td>SAT/ACT</td><td>Not used at all</td></tr>
+              <tr><td>Grades</td><td>NOT used in ranking &mdash; admission is decided entirely by the test below + a lottery draw</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Selection test (Cognitive Skills Test):</strong> two parts, each 50% &mdash; Mathematics (1 hr, Dutch VWO
+            level: functions, differential/integral calculus, trig, geometry, vectors) and Systematic Reasoning &amp;
+            Logical Thinking (45 min, propositional/predicate logic, Boolean algebra). No calculator. Online proctored
+            or on-campus. Score places her in one of 3 lottery categories per track; final rank is a random draw
+            within that category.
+          </p>
+          <p class="tutoring-note">
+            <strong>Prep plan:</strong> AP Calculus BC on schedule &middot; self-study discrete math/formal logic starting
+            junior year &mdash; not covered by typical US coursework &middot; use TU Delft's free pre-university calculus
+            course + free "Delftse Foundations of Computation" ch.2 textbook, ~15&ndash;25 hrs recommended prep &middot;
+            confirm high school's accreditation body for the application file &middot; register via Studielink from
+            October senior year, hard deadline Jan 15, results Apr 15, starts September (no gap after June graduation).
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>KAIST <span class="tutoring-status-badge">Fully funded</span></h2>
+          <p class="teacher-detail">Undergraduate, Computer Science track &middot; Daejeon, South Korea &middot; 4 years &middot; Holistic admission</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>Application</td><td>Transcripts, personal statement, study plan/essay, up to 2 recommendation letters (optional but recommended)</td></tr>
+              <tr><td>SAT/ACT/AP</td><td>Technically optional, effectively expected given competitiveness</td></tr>
+              <tr><td>English test</td><td>TOEFL iBT 83 / IELTS 6.5+ &mdash; likely waived for US English-medium schooling with documentation</td></tr>
+              <tr><td>Interview</td><td>Only if specifically requested by KAIST &mdash; not standard</td></tr>
+              <tr><td>Deadlines</td><td>Early Admission: docs due ~Oct 22 &middot; Regular Admission: ~Jan 14</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Cost:</strong> all international undergrads get a full tuition waiver (up to 8 semesters) plus a
+            ~$265&ndash;300/month stipend and health insurance, contingent on maintaining a GPA of just 2.7/4.3.
+            Effectively $0 tuition &mdash; living costs (~$8,000&ndash;10,000/yr) are partly offset by the stipend.
+          </p>
+          <p class="tutoring-note">
+            <strong>Prep plan:</strong> strong SAT/ACT and/or AP scores (Calc BC, CS A, Physics) &mdash; treat as
+            required despite being labeled optional &middot; start drafting the personal statement/study plan early,
+            since it carries real weight here unlike Monash/TU Delft &middot; line up 1&ndash;2 strong recommendation
+            letters, starting relationship-building junior year &middot; confirm the English-test waiver with her
+            school &middot; track both the Early (Oct) and Regular (Jan) deadlines &mdash; Early is worth targeting
+            given how competitive Regular gets.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Columbia + &Eacute;cole Polytechnique <span class="tutoring-status-badge">Apply via Polytechnique</span></h2>
+          <p class="teacher-detail">BS/MS Global Dual Degree in Engineering &middot; &Eacute;cole Polytechnique (France) + Columbia Engineering &middot; 5 years, entirely English-taught</p>
+          <p class="tutoring-note">
+            A different Columbia pathway from the Combined Plan on the 3+2 tab &mdash; this one is engineering-specific
+            and the application goes through <strong>&Eacute;cole Polytechnique, not Columbia</strong>. She'd apply
+            straight out of high school.
+          </p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>Structure</td><td>3-year Bachelor at &Eacute;cole Polytechnique + 2-year Master of Engineering at Columbia (choice of 9 M.Eng tracks) = BS + MS, 5 years total</td></tr>
+              <tr><td>Relevant track</td><td>Bachelor offers a Mathematics + Computer Science double-track &mdash; directly relevant to her CS interest (other double tracks: Math+Economics, Math+Engineering/Physics)</td></tr>
+              <tr><td>Admission</td><td>Holistic: HS diploma/IB or equivalent, strong math/science record, personal statement + CV, two referees, &euro;95 fee. One application covers both the Polytechnique-only BS and the Columbia BS/MS track &mdash; final track choice happens in Semester 2.</td></tr>
+              <tr><td>English</td><td>C1 level required &mdash; TOEFL iBT 90+ / IELTS 6.5+, exemption possible for 2+ years fully English-medium schooling (should cover her US high school)</td></tr>
+              <tr><td>Deadlines (rolling rounds)</td><td>Round 1: Oct 30 (decisions Feb) &middot; Round 2: Jan 5 (decisions Apr) &middot; Round 3: Feb 9 (decisions May)</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Prep plan:</strong> this bachelor is heavily quantitative, so AP Calculus BC, AP Computer Science A,
+            and AP Physics all directly strengthen the file &middot; confirm the English-exemption paperwork with her
+            school ahead of time so it's ready at application &middot; earlier rounds (Oct/Jan) are worth targeting over
+            the Feb round given typical seat availability &middot; this is highly selective &mdash; treat as a reach
+            alongside, not instead of, the direct-entry options above.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>UConn International Engineering Program <span class="tutoring-status-badge">Apply as UConn freshman</span></h2>
+          <p class="teacher-detail">5-year dual degree: BA in a language/culture + BS in Engineering &middot; University of Connecticut, Storrs</p>
+          <p class="tutoring-note">
+            The accessible option here &mdash; <strong>there's no separate admission event.</strong> She'd apply
+            to UConn as a normal incoming freshman (a far lower bar than Columbia or &Eacute;cole Polytechnique), then
+            opt into this program starting day one of college.
+          </p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>Tracks &amp; partners</td><td>Eurotech (Germany, Baden-W&uuml;rttemberg, 25+ years running) &middot; Technopole (France, University of Toulouse, incl. Airbus internships) &middot; ESP (Spain, Comillas Pontificia Madrid &amp; Polytechnic University of Valencia) &middot; AsiaTech (China, Shanghai)</td></tr>
+              <tr><td>CS relevance</td><td><strong>AsiaTech (China) explicitly lists Computer Science</strong> as an engineering specialization &mdash; the clearest fit for her. UConn's Computer Science/Computer Engineering BS majors exist program-wide; combining them with Eurotech or Technopole specifically should be confirmed with the program office.</td></tr>
+              <tr><td>Language prerequisite</td><td>None &mdash; true beginners start from scratch (e.g. German 1001); students with 3+ years of HS language start more advanced</td></tr>
+              <tr><td>Structure</td><td>One full year abroad in total immersion, typically between junior and senior year</td></tr>
+              <tr><td>Admission bar / deadlines</td><td>Not published online &mdash; GPA and program-specific deadlines require contacting the program office directly (International Engineering Program, 191 Auditorium Road, Unit 3187, Storrs, CT 06269)</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Prep plan:</strong> the real admission event is just applying to UConn as a regular freshman &mdash;
+            no extra reach-school prep needed for entry &middot; declare interest in the International Engineering
+            Program (ideally AsiaTech, for the direct CS tie-in) as early as possible, day one if she can &middot; no
+            need to front-load language study in high school, since true beginners are supported &middot; contact the
+            program office directly once she's shortlisting UConn to confirm current GPA/retention requirements and
+            whether AsiaTech pairs cleanly with a Computer Science major.
+          </p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

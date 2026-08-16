@@ -1,0 +1,494 @@
+:root {
+  --color-bg: #f5f6f8;
+  --color-card: #ffffff;
+  --color-text: #1c1f26;
+  --color-muted: #6b7280;
+  --color-accent: #2b5797;
+  --color-error: #c0392b;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+.app-header {
+  background: var(--color-accent);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.last-synced {
+  margin: 0.25rem 0 0;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.gate {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+#password-gate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 320px;
+  background: var(--color-card);
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#password-gate-form label {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+#password-gate-form input {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+#password-gate-form button {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--color-accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.error {
+  color: var(--color-error);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.card {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: var(--color-accent);
+}
+
+.schedule-day h3 {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 0.9rem;
+}
+
+.schedule-list,
+.assignments-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.schedule-item,
+.assignment-item {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.assignment-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.assignment-due {
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+.summary-text {
+  margin: 0;
+  line-height: 1.4;
+}
+
+#push-opt-in {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--color-accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.push-output {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: #f0f0f0;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.tab-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: var(--color-card);
+  color: var(--color-muted);
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+}
+
+.tutoring-contact {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+
+.tutoring-status-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  background: #1a7a1a;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  vertical-align: middle;
+  margin-left: 0.4rem;
+}
+
+.tutoring-note {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--color-muted);
+  margin: 0.5rem 0 0;
+}
+
+.tutoring-subject-group {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0 0 0.5rem;
+}
+.tutoring-subject-group:last-child {
+  margin-bottom: 0;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.tutoring-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.tutoring-table th,
+.tutoring-table td {
+  text-align: left;
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid #eee;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.table-scroll .tutoring-table th,
+.table-scroll .tutoring-table td {
+  white-space: nowrap;
+  word-break: normal;
+}
+
+.tutoring-table th {
+  color: var(--color-muted);
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.tutoring-total td {
+  font-weight: 700;
+  border-top: 2px solid #d1d5db;
+}
+
+.cal-source-note {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--color-muted);
+  background: #eef4fb;
+  border-left: 3px solid var(--color-accent);
+  padding: 0.5rem 0.6rem;
+  border-radius: 4px;
+  margin: 0 0 0.75rem;
+}
+
+.cal-day {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #eee;
+}
+.cal-day:last-child {
+  border-bottom: none;
+}
+.cal-day-today {
+  background: #eef4fb;
+  margin: 0 -1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+}
+.cal-day-off {
+  opacity: 0.7;
+}
+
+.cal-no-school-note {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin: 0.2rem 0 0;
+}
+.cal-modified-note {
+  font-size: 0.8rem;
+  color: #8a5a00;
+  background: #fff8e1;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  margin: 0.2rem 0 0;
+}
+
+.cal-day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.cal-date-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.cal-day-type {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+  color: #fff;
+}
+.cal-day-type-a { background: #2b5797; }
+.cal-day-type-b { background: #7a5c2e; }
+
+.cal-class-list,
+.cal-due-list {
+  list-style: none;
+  margin: 0.2rem 0 0;
+  padding: 0;
+}
+
+.cal-class-list li {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  padding: 0.15rem 0;
+}
+
+.cal-lunch-item {
+  font-style: italic;
+}
+
+.cal-due-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  padding: 0.2rem 0;
+}
+
+.cal-test-badge {
+  flex: 0 0 auto;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--color-error);
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.teacher-intro {
+  margin: 0 0 1rem;
+}
+
+.teacher-name {
+  margin: 0 0 0.15rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.teacher-detail {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.teacher-contact {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.teacher-pending {
+  margin: 0;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+.reminder-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.reminder-form label {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-top: 0.3rem;
+}
+
+.reminder-form input,
+.reminder-form textarea {
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.reminder-form button,
+#reminder-sync-btn {
+  margin-top: 0.6rem;
+  padding: 0.6rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--color-accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+#reminder-ics-input {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+}
+
+.reminder-empty {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin: 0;
+}
+
+.reminder-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reminder-item {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #eee;
+}
+.reminder-item:last-child {
+  border-bottom: none;
+}
+
+.reminder-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reminder-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.reminder-due-badge {
+  flex: 0 0 auto;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--color-accent);
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.reminder-date {
+  margin: 0.2rem 0 0;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.reminder-notes {
+  margin: 0.2rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.reminder-delete-btn {
+  margin-top: 0.4rem;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.75rem;
+  border: 1px solid var(--color-error);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--color-error);
+  cursor: pointer;
+}
