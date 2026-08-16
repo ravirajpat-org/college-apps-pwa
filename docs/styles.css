@@ -185,6 +185,43 @@ main {
   border-color: var(--color-accent);
 }
 
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+}
+
+.filter-pill {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  background: var(--color-card);
+  color: var(--color-text);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filter-pill.active {
+  background: #33422f;
+  color: #fff;
+  border-color: #33422f;
+}
+.filter-pill.active[data-filter="reach"] {
+  background: var(--color-error);
+  border-color: var(--color-error);
+}
+.filter-pill.active[data-filter="target"] {
+  background: #a15c00;
+  border-color: #a15c00;
+}
+.filter-pill.active[data-filter="safety"] {
+  background: #1a7a1a;
+  border-color: #1a7a1a;
+}
+
 .tutoring-contact {
   margin: 0 0 0.5rem;
   font-size: 0.85rem;

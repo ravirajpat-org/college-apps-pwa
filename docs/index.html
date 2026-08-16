@@ -65,26 +65,33 @@
           numbers are locked in; these labels will shift as her profile develops.
         </p>
 
+        <div class="filter-bar">
+          <button class="filter-pill active" data-filter="all" type="button">All</button>
+          <button class="filter-pill" data-filter="reach" type="button">Reach</button>
+          <button class="filter-pill" data-filter="target" type="button">Target</button>
+          <button class="filter-pill" data-filter="safety" type="button">Safety</button>
+        </div>
+
         <section class="card">
           <h2>Quick Comparison</h2>
           <div class="table-scroll">
             <table class="tutoring-table">
               <thead><tr><th>Rank</th><th>School</th><th>R/T/S</th><th>CS admission bar</th><th>Aerospace fit</th><th>TX auto-admit relevant?</th></tr></thead>
               <tbody>
-                <tr><td>1</td><td>Rice University</td><td>Reach</td><td>~3.8+ GPA, SAT 1550+ &mdash; holistic, no auto-admit path (private)</td><td>No dedicated major &mdash; aerospace track within Mechanical Engineering only</td><td>No &mdash; private</td></tr>
-                <tr><td>2</td><td>UT Austin (CS / Turing Scholars)</td><td>Reach</td><td>4.0 GPA, top 1&ndash;3% rank, SAT 1500&ndash;1560, portfolio</td><td>Strong &mdash; #2 in TX, top 10 nationally for some specialties</td><td>Top 6% auto-admits to UT, NOT to CS or Aerospace specifically</td></tr>
-                <tr><td>3</td><td>Texas A&amp;M</td><td>Target</td><td>Holistic for direct CS entry, avg GPA ~3.67, SAT optional</td><td><strong>Best in Texas</strong> &mdash; top 15 nationally, #6 among publics</td><td>Top 10% auto-admits to A&amp;M, NOT guaranteed CS or Aerospace placement</td></tr>
-                <tr><td>4</td><td>UT Dallas</td><td>Safety</td><td>GPA 3.6&ndash;4.0 weighted typical, SAT 1170&ndash;1390 range</td><td>No dedicated major &mdash; general Mechanical Engineering only</td><td>Not rank-dependent &mdash; most accessible of the group</td></tr>
-                <tr><td>5</td><td>SMU</td><td>Target</td><td>GPA 3.53&ndash;3.94 middle 50%, SAT 1320&ndash;1480 if submitted</td><td>No dedicated major</td><td>No &mdash; private, holistic</td></tr>
-                <tr><td>6</td><td>UT Arlington</td><td>Safety</td><td>Not this app's CS focus &mdash; large engineering college, more accessible overall</td><td>Dedicated Aerospace Engineering BS, top 50&ndash;60 nationally</td><td>Not rank-dependent</td></tr>
+                <tr data-rts="reach"><td>1</td><td>Rice University</td><td>Reach</td><td>~3.8+ GPA, SAT 1550+ &mdash; holistic, no auto-admit path (private)</td><td>No dedicated major &mdash; aerospace track within Mechanical Engineering only</td><td>No &mdash; private</td></tr>
+                <tr data-rts="reach"><td>2</td><td>UT Austin (CS / Turing Scholars)</td><td>Reach</td><td>4.0 GPA, top 1&ndash;3% rank, SAT 1500&ndash;1560, portfolio</td><td>Strong &mdash; #2 in TX, top 10 nationally for some specialties</td><td>Top 6% auto-admits to UT, NOT to CS or Aerospace specifically</td></tr>
+                <tr data-rts="target"><td>3</td><td>Texas A&amp;M</td><td>Target</td><td>Holistic for direct CS entry, avg GPA ~3.67, SAT optional</td><td><strong>Best in Texas</strong> &mdash; top 15 nationally, #6 among publics</td><td>Top 10% auto-admits to A&amp;M, NOT guaranteed CS or Aerospace placement</td></tr>
+                <tr data-rts="safety"><td>4</td><td>UT Dallas</td><td>Safety</td><td>GPA 3.6&ndash;4.0 weighted typical, SAT 1170&ndash;1390 range</td><td>No dedicated major &mdash; general Mechanical Engineering only</td><td>Not rank-dependent &mdash; most accessible of the group</td></tr>
+                <tr data-rts="target"><td>5</td><td>SMU</td><td>Target</td><td>GPA 3.53&ndash;3.94 middle 50%, SAT 1320&ndash;1480 if submitted</td><td>No dedicated major</td><td>No &mdash; private, holistic</td></tr>
+                <tr data-rts="safety"><td>6</td><td>UT Arlington</td><td>Safety</td><td>Not this app's CS focus &mdash; large engineering college, more accessible overall</td><td>Dedicated Aerospace Engineering BS, top 50&ndash;60 nationally</td><td>Not rank-dependent</td></tr>
               </tbody>
             </table>
           </div>
         </section>
 
-        <h3 class="rts-divider">Reach</h3>
+        <h3 class="rts-divider" data-rts="reach">Reach</h3>
 
-        <section class="card">
+        <section class="card" data-rts="reach">
           <h2><span class="rts-badge rts-reach">Reach</span>Rice University <span class="tutoring-status-badge">Most prestigious, private</span></h2>
           <p class="teacher-detail">Computer Science &middot; Houston, TX &middot; ~8% acceptance rate &middot; test-optional</p>
           <table class="tutoring-table">
@@ -107,7 +114,7 @@
           </p>
         </section>
 
-        <section class="card">
+        <section class="card" data-rts="reach">
           <h2><span class="rts-badge rts-reach">Reach</span>UT Austin &mdash; Computer Science / Turing Scholars <span class="tutoring-status-badge">Top CS program, public</span></h2>
           <p class="teacher-detail">Department of Computer Science &middot; Austin, TX &middot; CS direct-admit acceptance ~5&ndash;8% &middot; one of the most competitive public CS programs nationally</p>
           <table class="tutoring-table">
@@ -132,9 +139,9 @@
           </p>
         </section>
 
-        <h3 class="rts-divider">Target</h3>
+        <h3 class="rts-divider" data-rts="target">Target</h3>
 
-        <section class="card">
+        <section class="card" data-rts="target">
           <h2><span class="rts-badge rts-target">Target</span>Texas A&amp;M University <span class="tutoring-status-badge">Strong engineering, public flagship</span></h2>
           <p class="teacher-detail">Computer Science &amp; Engineering &middot; College Station, TX &middot; large public flagship, holistic direct-to-major CS admission</p>
           <table class="tutoring-table">
@@ -156,7 +163,7 @@
           </p>
         </section>
 
-        <section class="card">
+        <section class="card" data-rts="target">
           <h2><span class="rts-badge rts-target">Target</span>SMU <span class="tutoring-status-badge">Private, solid safety option</span></h2>
           <p class="teacher-detail">Computer Science &middot; Dallas, TX &middot; test-optional &middot; private</p>
           <table class="tutoring-table">
@@ -178,9 +185,9 @@
           </p>
         </section>
 
-        <h3 class="rts-divider">Safety</h3>
+        <h3 class="rts-divider" data-rts="safety">Safety</h3>
 
-        <section class="card">
+        <section class="card" data-rts="safety">
           <h2><span class="rts-badge rts-safety">Safety</span>UT Dallas <span class="tutoring-status-badge">CS-focused reputation, accessible</span></h2>
           <p class="teacher-detail">Computer Science &middot; Richardson, TX &middot; ~65% acceptance rate &middot; known for CS program strength relative to overall selectivity</p>
           <table class="tutoring-table">
@@ -202,7 +209,7 @@
           </p>
         </section>
 
-        <section class="card">
+        <section class="card" data-rts="safety">
           <h2><span class="rts-badge rts-safety">Safety</span>UT Arlington <span class="tutoring-status-badge">Added for Aerospace fit</span></h2>
           <p class="teacher-detail">Dedicated Bachelor of Science in Aerospace Engineering &middot; Arlington, TX &middot; large College of Engineering, practical/industry-connected focus</p>
           <table class="tutoring-table">
@@ -235,24 +242,31 @@
           flagship engineering admission.
         </p>
 
+        <div class="filter-bar">
+          <button class="filter-pill active" data-filter="all" type="button">All</button>
+          <button class="filter-pill" data-filter="reach" type="button">Reach</button>
+          <button class="filter-pill" data-filter="target" type="button">Target</button>
+          <button class="filter-pill" data-filter="safety" type="button">Safety</button>
+        </div>
+
         <section class="card">
           <h2>Quick Comparison</h2>
           <div class="table-scroll">
             <table class="tutoring-table">
               <thead><tr><th>Rank</th><th>School</th><th>R/T/S</th><th>CS strength</th><th>Aerospace strength</th><th>Out-of-state bar</th></tr></thead>
               <tbody>
-                <tr><td>1</td><td>Georgia Tech</td><td>Reach</td><td>Top 5&ndash;10 &mdash; elite</td><td>Guggenheim School, #1 public grad program &mdash; elite</td><td>Toughest of the four &mdash; CS/Aero admit rates in single digits out-of-state</td></tr>
-                <tr><td>2</td><td>Purdue</td><td>Target</td><td>Top 16&ndash;20</td><td>Top 8 nationally &mdash; storied heritage (Armstrong, Cernan)</td><td>Most accessible of the four for these majors</td></tr>
-                <tr><td>3</td><td>Michigan</td><td>Reach</td><td>Top 10&ndash;15</td><td>Top 5</td><td>Very selective out-of-state overall (~6&ndash;18%)</td></tr>
-                <tr><td>4</td><td>UIUC</td><td>Reach</td><td>Top 5&ndash;10 &mdash; elite</td><td>Solid, respected (not the standout here &mdash; CS/ECE is)</td><td>CS/Engineering behave like reaches regardless of residency</td></tr>
+                <tr data-rts="reach"><td>1</td><td>Georgia Tech</td><td>Reach</td><td>Top 5&ndash;10 &mdash; elite</td><td>Guggenheim School, #1 public grad program &mdash; elite</td><td>Toughest of the four &mdash; CS/Aero admit rates in single digits out-of-state</td></tr>
+                <tr data-rts="target"><td>2</td><td>Purdue</td><td>Target</td><td>Top 16&ndash;20</td><td>Top 8 nationally &mdash; storied heritage (Armstrong, Cernan)</td><td>Most accessible of the four for these majors</td></tr>
+                <tr data-rts="reach"><td>3</td><td>Michigan</td><td>Reach</td><td>Top 10&ndash;15</td><td>Top 5</td><td>Very selective out-of-state overall (~6&ndash;18%)</td></tr>
+                <tr data-rts="reach"><td>4</td><td>UIUC</td><td>Reach</td><td>Top 5&ndash;10 &mdash; elite</td><td>Solid, respected (not the standout here &mdash; CS/ECE is)</td><td>CS/Engineering behave like reaches regardless of residency</td></tr>
               </tbody>
             </table>
           </div>
         </section>
 
-        <h3 class="rts-divider">Reach</h3>
+        <h3 class="rts-divider" data-rts="reach">Reach</h3>
 
-        <section class="card">
+        <section class="card" data-rts="reach">
           <h2><span class="rts-badge rts-reach">Reach</span>Georgia Tech <span class="tutoring-status-badge">Elite in both, toughest bar</span></h2>
           <p class="teacher-detail">College of Computing (CS) + Daniel Guggenheim School of Aerospace Engineering &middot; Atlanta, GA &middot; admits by major</p>
           <table class="tutoring-table">
@@ -272,7 +286,7 @@
           </p>
         </section>
 
-        <section class="card">
+        <section class="card" data-rts="reach">
           <h2><span class="rts-badge rts-reach">Reach</span>University of Michigan <span class="tutoring-status-badge">Strong both, selective out-of-state</span></h2>
           <p class="teacher-detail">College of Engineering (CS &amp; Aerospace Engineering) &middot; Ann Arbor, MI</p>
           <table class="tutoring-table">
@@ -291,7 +305,7 @@
           </p>
         </section>
 
-        <section class="card">
+        <section class="card" data-rts="reach">
           <h2><span class="rts-badge rts-reach">Reach</span>UIUC <span class="tutoring-status-badge">Elite CS, solid Aerospace</span></h2>
           <p class="teacher-detail">Grainger College of Engineering &middot; Urbana-Champaign, IL &middot; CS/ECE is the headline strength here, not Aerospace</p>
           <table class="tutoring-table">
@@ -310,9 +324,9 @@
           </p>
         </section>
 
-        <h3 class="rts-divider">Target</h3>
+        <h3 class="rts-divider" data-rts="target">Target</h3>
 
-        <section class="card">
+        <section class="card" data-rts="target">
           <h2><span class="rts-badge rts-target">Target</span>Purdue <span class="tutoring-status-badge">Most accessible of the four</span></h2>
           <p class="teacher-detail">College of Science (CS) + School of Aeronautics and Astronautics &middot; West Lafayette, IN &middot; storied aerospace heritage (Neil Armstrong, Gene Cernan)</p>
           <table class="tutoring-table">
@@ -344,6 +358,18 @@
           &Eacute;cole Polytechnique, and each affiliate school in the ranking table below). The Columbia Combined
           Plan card itself isn't classifiable this way &mdash; her actual HS-level admission event is choosing an
           affiliate school, not Columbia, so R/T/S is applied to the affiliate ranking table instead.
+        </p>
+
+        <div class="filter-bar">
+          <button class="filter-pill active" data-filter="all" type="button">All</button>
+          <button class="filter-pill" data-filter="reach" type="button">Reach</button>
+          <button class="filter-pill" data-filter="target" type="button">Target</button>
+          <button class="filter-pill" data-filter="safety" type="button">Safety</button>
+        </div>
+        <p class="tutoring-note">
+          This filter affects the Affiliate Ranking and Master LAC Cross-Reference tables below &mdash; not
+          the Combined Plan intro card or the non-rated sponsor-schools landscape table, which stay visible
+          regardless. (Columbia + &Eacute;cole Polytechnique has its own rating on the International tab.)
         </p>
 
         <section class="card">
@@ -387,26 +413,26 @@
             <table class="tutoring-table">
               <thead><tr><th>Rank</th><th>School</th><th>R/T/S</th><th>Tier</th><th>Sticker/yr</th><th>Merit aid</th><th>Weighted score</th></tr></thead>
               <tbody>
-                <tr><td>1</td><td>SUNY Binghamton</td><td>Target</td><td>2 (public)</td><td>$51,256</td><td>Limited (President's/Provost's/Dean's, up to ~$10k/yr, competitive)</td><td>83.3</td></tr>
-                <tr><td>2</td><td>Sweet Briar</td><td>Safety</td><td>4</td><td>$45,890</td><td>Strong &mdash; automatic consideration + named full-tuition awards</td><td>73.5</td></tr>
-                <tr><td>3</td><td>William &amp; Mary</td><td>Reach</td><td>2 (public)</td><td>$70,730</td><td>Limited, primarily need-based (out-of-state)</td><td>70.8</td></tr>
-                <tr><td>4</td><td>Wells</td><td>Safety</td><td>4</td><td>$52,466</td><td>Strong &mdash; 97% of students get aid, avg ~$26,625</td><td>67.3</td></tr>
-                <tr><td>5</td><td>Centenary</td><td>Safety</td><td>4</td><td>$60,960</td><td>Strong &mdash; wide range of merit scholarships</td><td>60.8</td></tr>
-                <tr><td>6</td><td>Bowdoin</td><td>Reach</td><td>1</td><td>$88,820</td><td>None &mdash; need-based only, meets 100% need</td><td>59.9</td></tr>
-                <tr><td>7</td><td>Williams</td><td>Reach</td><td>1</td><td>$95,960</td><td>None &mdash; need-based only</td><td>54.7</td></tr>
-                <tr><td>8</td><td>Oberlin</td><td>Reach</td><td>2</td><td>$88,784</td><td>Moderate &mdash; $10k Oberlin Commitment to all, up to $25k Midwest Merit</td><td>54.0</td></tr>
-                <tr><td>9</td><td>Georgetown</td><td>Reach</td><td>1</td><td>~$96,500</td><td>None &mdash; need-based only</td><td>52.2</td></tr>
-                <tr><td>10</td><td>Reed</td><td>Target</td><td>2</td><td>$91,048</td><td>None &mdash; explicitly no merit aid, need-based only</td><td>51.5</td></tr>
-                <tr><td>11</td><td>Colgate</td><td>Reach</td><td>1</td><td>~$96,500*</td><td>None &mdash; need-based only</td><td>50.7</td></tr>
-                <tr><td>12</td><td>Colby</td><td>Reach</td><td>1</td><td>~$96,600</td><td>None &mdash; need-based only</td><td>50.6</td></tr>
-                <tr><td>13</td><td>Muhlenberg</td><td>Target</td><td>3</td><td>$81,003</td><td>Strong &mdash; avg ~$27,376</td><td>50.3</td></tr>
-                <tr><td>14</td><td>American</td><td>Target</td><td>3</td><td>$82,780</td><td>Not verified &mdash; confirm directly</td><td>50.2</td></tr>
-                <tr><td>15</td><td>Richmond</td><td>Target</td><td>2</td><td>~$90,500</td><td>Strong &mdash; Richmond Scholars (full ride), Presidential (1/3 tuition)</td><td>50.0</td></tr>
-                <tr><td>16</td><td>Loyola Maryland</td><td>Safety</td><td>4</td><td>$81,750</td><td>Very strong &mdash; award range $33,000&ndash;$39,000/yr</td><td>46.1</td></tr>
-                <tr><td>17</td><td>Bard*</td><td>Target</td><td>3</td><td>~$88,238</td><td>Not verified &mdash; confirm directly</td><td>46.0</td></tr>
-                <tr><td>18</td><td>Denison</td><td>Reach</td><td>2</td><td>$96,900</td><td>Moderate &mdash; avg ~$19,149</td><td>45.4</td></tr>
-                <tr><td>19</td><td>Barnard</td><td>Reach</td><td>1</td><td>$103,000</td><td>None &mdash; need-based only</td><td>45.0</td></tr>
-                <tr><td>20</td><td>Fordham</td><td>Target</td><td>3</td><td>$93,168</td><td>Strong &mdash; 2 full-tuition scholarships + Loyola Scholarship $1k&ndash;$12.5k</td><td>42.6</td></tr>
+                <tr data-rts="target"><td>1</td><td>SUNY Binghamton</td><td>Target</td><td>2 (public)</td><td>$51,256</td><td>Limited (President's/Provost's/Dean's, up to ~$10k/yr, competitive)</td><td>83.3</td></tr>
+                <tr data-rts="safety"><td>2</td><td>Sweet Briar</td><td>Safety</td><td>4</td><td>$45,890</td><td>Strong &mdash; automatic consideration + named full-tuition awards</td><td>73.5</td></tr>
+                <tr data-rts="reach"><td>3</td><td>William &amp; Mary</td><td>Reach</td><td>2 (public)</td><td>$70,730</td><td>Limited, primarily need-based (out-of-state)</td><td>70.8</td></tr>
+                <tr data-rts="safety"><td>4</td><td>Wells</td><td>Safety</td><td>4</td><td>$52,466</td><td>Strong &mdash; 97% of students get aid, avg ~$26,625</td><td>67.3</td></tr>
+                <tr data-rts="safety"><td>5</td><td>Centenary</td><td>Safety</td><td>4</td><td>$60,960</td><td>Strong &mdash; wide range of merit scholarships</td><td>60.8</td></tr>
+                <tr data-rts="reach"><td>6</td><td>Bowdoin</td><td>Reach</td><td>1</td><td>$88,820</td><td>None &mdash; need-based only, meets 100% need</td><td>59.9</td></tr>
+                <tr data-rts="reach"><td>7</td><td>Williams</td><td>Reach</td><td>1</td><td>$95,960</td><td>None &mdash; need-based only</td><td>54.7</td></tr>
+                <tr data-rts="reach"><td>8</td><td>Oberlin</td><td>Reach</td><td>2</td><td>$88,784</td><td>Moderate &mdash; $10k Oberlin Commitment to all, up to $25k Midwest Merit</td><td>54.0</td></tr>
+                <tr data-rts="reach"><td>9</td><td>Georgetown</td><td>Reach</td><td>1</td><td>~$96,500</td><td>None &mdash; need-based only</td><td>52.2</td></tr>
+                <tr data-rts="target"><td>10</td><td>Reed</td><td>Target</td><td>2</td><td>$91,048</td><td>None &mdash; explicitly no merit aid, need-based only</td><td>51.5</td></tr>
+                <tr data-rts="reach"><td>11</td><td>Colgate</td><td>Reach</td><td>1</td><td>~$96,500*</td><td>None &mdash; need-based only</td><td>50.7</td></tr>
+                <tr data-rts="reach"><td>12</td><td>Colby</td><td>Reach</td><td>1</td><td>~$96,600</td><td>None &mdash; need-based only</td><td>50.6</td></tr>
+                <tr data-rts="target"><td>13</td><td>Muhlenberg</td><td>Target</td><td>3</td><td>$81,003</td><td>Strong &mdash; avg ~$27,376</td><td>50.3</td></tr>
+                <tr data-rts="target"><td>14</td><td>American</td><td>Target</td><td>3</td><td>$82,780</td><td>Not verified &mdash; confirm directly</td><td>50.2</td></tr>
+                <tr data-rts="target"><td>15</td><td>Richmond</td><td>Target</td><td>2</td><td>~$90,500</td><td>Strong &mdash; Richmond Scholars (full ride), Presidential (1/3 tuition)</td><td>50.0</td></tr>
+                <tr data-rts="safety"><td>16</td><td>Loyola Maryland</td><td>Safety</td><td>4</td><td>$81,750</td><td>Very strong &mdash; award range $33,000&ndash;$39,000/yr</td><td>46.1</td></tr>
+                <tr data-rts="target"><td>17</td><td>Bard*</td><td>Target</td><td>3</td><td>~$88,238</td><td>Not verified &mdash; confirm directly</td><td>46.0</td></tr>
+                <tr data-rts="reach"><td>18</td><td>Denison</td><td>Reach</td><td>2</td><td>$96,900</td><td>Moderate &mdash; avg ~$19,149</td><td>45.4</td></tr>
+                <tr data-rts="reach"><td>19</td><td>Barnard</td><td>Reach</td><td>1</td><td>$103,000</td><td>None &mdash; need-based only</td><td>45.0</td></tr>
+                <tr data-rts="target"><td>20</td><td>Fordham</td><td>Target</td><td>3</td><td>$93,168</td><td>Strong &mdash; 2 full-tuition scholarships + Loyola Scholarship $1k&ndash;$12.5k</td><td>42.6</td></tr>
               </tbody>
             </table>
           </div>
@@ -483,7 +509,7 @@
             estimated by institution type/tier and should be confirmed directly before relying on them.
           </p>
 
-          <h3 class="rts-divider">Reach</h3>
+          <h3 class="rts-divider" data-rts="reach">Reach</h3>
           <div class="table-scroll">
             <table class="tutoring-table">
               <thead><tr><th>School</th><th>Engineering Partner(s)</th><th>Physics/Pre-Eng Prep</th><th>$ Value (Sticker/yr)</th></tr></thead>
@@ -509,7 +535,7 @@
             </table>
           </div>
 
-          <h3 class="rts-divider">Target</h3>
+          <h3 class="rts-divider" data-rts="target">Target</h3>
           <div class="table-scroll">
             <table class="tutoring-table">
               <thead><tr><th>School</th><th>Engineering Partner(s)</th><th>Physics/Pre-Eng Prep</th><th>$ Value (Sticker/yr)</th></tr></thead>
@@ -545,7 +571,7 @@
             </table>
           </div>
 
-          <h3 class="rts-divider">Safety</h3>
+          <h3 class="rts-divider" data-rts="safety">Safety</h3>
           <div class="table-scroll">
             <table class="tutoring-table">
               <thead><tr><th>School</th><th>Engineering Partner(s)</th><th>Physics/Pre-Eng Prep</th><th>$ Value (Sticker/yr)</th></tr></thead>
@@ -606,6 +632,13 @@
           arguably an even bigger draw than its already-strong CS program if Aerospace is a real interest.
         </p>
 
+        <div class="filter-bar">
+          <button class="filter-pill active" data-filter="all" type="button">All</button>
+          <button class="filter-pill" data-filter="reach" type="button">Reach</button>
+          <button class="filter-pill" data-filter="target" type="button">Target</button>
+          <button class="filter-pill" data-filter="safety" type="button">Safety</button>
+        </div>
+
         <section class="card">
           <h2>Quick Comparison</h2>
           <div class="table-scroll">
@@ -624,9 +657,9 @@
           <p class="tutoring-note">Figures are current as of research in Aug 2026 &mdash; re-verify closer to application time, especially TU Delft's non-EU fee (trending upward) and Monash's ATAR/GPA bar.</p>
         </section>
 
-        <h3 class="rts-divider">Reach</h3>
+        <h3 class="rts-divider" data-rts="reach">Reach</h3>
 
-        <section class="card">
+        <section class="card" data-rts="reach">
           <h2><span class="rts-badge rts-reach">Reach</span>TU Delft <span class="tutoring-status-badge">World #10 in Aerospace</span></h2>
           <p class="teacher-detail">BSc Computer Science &amp; Engineering &middot; Delft, Netherlands &middot; 3 years &middot; Numerus fixus (590 seats/yr, 345 English track)</p>
           <p class="tutoring-note">
@@ -661,7 +694,7 @@
           </p>
         </section>
 
-        <section class="card">
+        <section class="card" data-rts="reach">
           <h2><span class="rts-badge rts-reach">Reach</span>KAIST <span class="tutoring-status-badge">Fully funded</span></h2>
           <p class="teacher-detail">Undergraduate, Computer Science <em>or</em> Aerospace Engineering track &middot; Daejeon, South Korea &middot; 4 years &middot; Holistic admission</p>
           <table class="tutoring-table">
@@ -690,7 +723,7 @@
           </p>
         </section>
 
-        <section class="card">
+        <section class="card" data-rts="reach">
           <h2><span class="rts-badge rts-reach">Reach</span>Columbia + &Eacute;cole Polytechnique <span class="tutoring-status-badge">Apply via Polytechnique</span></h2>
           <p class="teacher-detail">BS/MS Global Dual Degree in Engineering &middot; &Eacute;cole Polytechnique (France) + Columbia Engineering &middot; 5 years, entirely English-taught</p>
           <p class="tutoring-note">
@@ -718,9 +751,9 @@
           </p>
         </section>
 
-        <h3 class="rts-divider">Target</h3>
+        <h3 class="rts-divider" data-rts="target">Target</h3>
 
-        <section class="card">
+        <section class="card" data-rts="target">
           <h2><span class="rts-badge rts-target">Target</span>Monash University <span class="tutoring-status-badge">Rolling admission</span></h2>
           <p class="teacher-detail">Bachelor of Software Engineering (Honours) &middot; Clayton campus, Melbourne, Australia &middot; 4 years &middot; Engineers Australia accredited</p>
           <table class="tutoring-table">
@@ -746,7 +779,7 @@
           </p>
         </section>
 
-        <section class="card">
+        <section class="card" data-rts="target">
           <h2><span class="rts-badge rts-target">Target</span>University of St Andrews <span class="tutoring-status-badge">Top-4 UK for CS</span></h2>
           <p class="teacher-detail">BSc (Hons) Computer Science &middot; St Andrews, Scotland &middot; 4 years &middot; direct entry, NOT the William &amp; Mary Joint Degree Programme</p>
           <p class="tutoring-note">
@@ -780,9 +813,9 @@
           </p>
         </section>
 
-        <h3 class="rts-divider">Safety</h3>
+        <h3 class="rts-divider" data-rts="safety">Safety</h3>
 
-        <section class="card">
+        <section class="card" data-rts="safety">
           <h2><span class="rts-badge rts-safety">Safety</span>UConn International Engineering Program <span class="tutoring-status-badge">Apply as UConn freshman</span></h2>
           <p class="teacher-detail">5-year dual degree: BA in a language/culture + BS in Engineering &middot; University of Connecticut, Storrs</p>
           <p class="tutoring-note">
@@ -841,9 +874,16 @@
           CS fit &mdash; Texas A&amp;M Qatar is left unclassified since it has no CS or Aerospace major at all.
         </p>
 
-        <h3 class="rts-divider">Reach</h3>
+        <div class="filter-bar">
+          <button class="filter-pill active" data-filter="all" type="button">All</button>
+          <button class="filter-pill" data-filter="reach" type="button">Reach</button>
+          <button class="filter-pill" data-filter="target" type="button">Target</button>
+          <button class="filter-pill" data-filter="safety" type="button">Safety</button>
+        </div>
 
-        <section class="card">
+        <h3 class="rts-divider" data-rts="reach">Reach</h3>
+
+        <section class="card" data-rts="reach">
           <h2><span class="rts-badge rts-reach">Reach</span>NYU Abu Dhabi <span class="tutoring-status-badge">~4% acceptance, generous aid</span></h2>
           <p class="teacher-detail">Computer Science (BS) &middot; Abu Dhabi, UAE &middot; part of NYU's Global Network University &middot; liberal-arts core</p>
           <table class="tutoring-table">
@@ -865,7 +905,7 @@
           </p>
         </section>
 
-        <section class="card">
+        <section class="card" data-rts="reach">
           <h2><span class="rts-badge rts-reach">Reach</span>NYU Shanghai <span class="tutoring-status-badge">Tighter than NYU NY</span></h2>
           <p class="teacher-detail">Computer Science &middot; Shanghai, China &middot; part of NYU's Global Network University, joint venture with East China Normal University</p>
           <table class="tutoring-table">
@@ -885,9 +925,9 @@
           </p>
         </section>
 
-        <h3 class="rts-divider">Target</h3>
+        <h3 class="rts-divider" data-rts="target">Target</h3>
 
-        <section class="card">
+        <section class="card" data-rts="target">
           <h2><span class="rts-badge rts-target">Target</span>Carnegie Mellon Qatar <span class="tutoring-status-badge">CMU's CS brand, small campus</span></h2>
           <p class="teacher-detail">Computer Science &middot; Doha, Qatar (Education City) &middot; same degree/rigor as CMU Pittsburgh, only 5 majors offered campus-wide</p>
           <table class="tutoring-table">
@@ -914,7 +954,7 @@
           </p>
         </section>
 
-        <section class="card">
+        <section class="card" data-rts="target">
           <h2><span class="rts-badge rts-target">Target</span>Duke Kunshan University <span class="tutoring-status-badge">CS-adjacent, dual degree</span></h2>
           <p class="teacher-detail">Applied Mathematics and Computational Sciences (CS track) &middot; Kunshan, China &middot; dual degree: BA from Duke Kunshan + BA from Duke</p>
           <table class="tutoring-table">

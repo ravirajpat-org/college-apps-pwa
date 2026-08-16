@@ -66,6 +66,53 @@ function wireTabs() {
   });
 }
 
+// Reach/Target/Safety filter pills. Any element carrying data-rts (school
+// cards, and table rows in the ranking/cross-reference tables) is a
+// filterable unit; elements without data-rts (Quick Comparison card
+// wrappers, the Combined Plan intro card, landscape-scan tables with no
+// per-school rating) are intentionally left alone and always stay visible.
+function updateFilterCounts(panel) {
+  const total = panel.querySelectorAll("[data-rts]").length;
+  panel.querySelectorAll(".filter-pill").forEach((btn) => {
+    const filter = btn.dataset.filter;
+    const label = filter.charAt(0).toUpperCase() + filter.slice(1);
+    const count =
+      filter === "all"
+        ? total
+        : panel.querySelectorAll(`[data-rts="${filter}"]`).length;
+    btn.textContent = `${label} (${count})`;
+  });
+}
+
+function applyFilter(panel, filter) {
+  panel.querySelectorAll("[data-rts]").forEach((el) => {
+    const matches = filter === "all" || el.dataset.rts === filter;
+    el.hidden = !matches;
+    // The Master LAC cross-reference lists three plain tables (one per
+    // R/T/S group) directly after their divider, rather than as separate
+    // cards — toggle the table along with its divider.
+    const next = el.nextElementSibling;
+    if (next && next.classList.contains("table-scroll")) {
+      next.hidden = !matches;
+    }
+  });
+}
+
+function wireFilterBars() {
+  document.querySelectorAll(".filter-bar").forEach((bar) => {
+    const panel = bar.closest(".tab-panel");
+    updateFilterCounts(panel);
+    bar.querySelectorAll(".filter-pill").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        bar
+          .querySelectorAll(".filter-pill")
+          .forEach((b) => b.classList.toggle("active", b === btn));
+        applyFilter(panel, btn.dataset.filter);
+      });
+    });
+  });
+}
+
 function registerServiceWorker() {
   if (!("serviceWorker" in navigator)) return;
   navigator.serviceWorker.register("service-worker.js").catch(() => {
@@ -75,4 +122,5 @@ function registerServiceWorker() {
 
 gateForm.addEventListener("submit", handleGateSubmit);
 wireTabs();
+wireFilterBars();
 registerServiceWorker();
