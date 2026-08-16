@@ -37,30 +37,263 @@
         <button class="tab-btn" data-panel="outstate-panel" type="button">Out of State</button>
         <button class="tab-btn" data-panel="threetwo-panel" type="button">3+2</button>
         <button class="tab-btn" data-panel="international-panel" type="button">International</button>
+        <button class="tab-btn" data-panel="uscampuses-panel" type="button">US Global Campuses</button>
       </nav>
 
       <div id="instate-panel" class="tab-panel">
         <p class="tutoring-note teacher-intro">
-          Texas schools (in-state tuition) for Sasha's Computer Science / Software
-          Engineering search. Not researched yet.
+          Texas schools (in-state tuition), ranked by program reputation + overall selectivity, now
+          evaluated for both Computer Science AND Aerospace Engineering fit. <strong>Texas-specific factor
+          that changes strategy:</strong> the state's automatic-admission rule is based on <em>class rank
+          percentile</em>, not raw GPA &mdash; top 6% guarantees admission to UT Austin, top 10% to Texas
+          A&amp;M (for TX residents meeting course requirements). But auto-admission to the <em>university</em>
+          does NOT guarantee placement in either the CS or Aerospace major at these two schools &mdash; both
+          are separately competitive on top of that. Class rank, not just GPA, is worth tracking closely
+          from here on.
         </p>
+        <p class="tutoring-note">
+          <strong>Aerospace changes the picture meaningfully:</strong> Rice, UT Dallas, and SMU have no
+          dedicated undergraduate Aerospace Engineering major (Rice offers an aerospace track within
+          Mechanical Engineering only) &mdash; Texas A&amp;M and UT Austin are the two real in-state options
+          for aerospace specifically. Added UT Arlington below since it's the one additional Texas school
+          with a genuine dedicated Aerospace Engineering degree.
+        </p>
+
         <section class="card">
-          <h2>Not started yet <span class="tutoring-status-badge">TODO</span></h2>
+          <h2>Quick Comparison</h2>
+          <div class="table-scroll">
+            <table class="tutoring-table">
+              <thead><tr><th>Rank</th><th>School</th><th>CS admission bar</th><th>Aerospace fit</th><th>TX auto-admit relevant?</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>Rice University</td><td>~3.8+ GPA, SAT 1550+ &mdash; holistic, no auto-admit path (private)</td><td>No dedicated major &mdash; aerospace track within Mechanical Engineering only</td><td>No &mdash; private</td></tr>
+                <tr><td>2</td><td>UT Austin (CS / Turing Scholars)</td><td>4.0 GPA, top 1&ndash;3% rank, SAT 1500&ndash;1560, portfolio</td><td>Strong &mdash; #2 in TX, top 10 nationally for some specialties</td><td>Top 6% auto-admits to UT, NOT to CS or Aerospace specifically</td></tr>
+                <tr><td>3</td><td>Texas A&amp;M</td><td>Holistic for direct CS entry, avg GPA ~3.67, SAT optional</td><td><strong>Best in Texas</strong> &mdash; top 15 nationally, #6 among publics</td><td>Top 10% auto-admits to A&amp;M, NOT guaranteed CS or Aerospace placement</td></tr>
+                <tr><td>4</td><td>UT Dallas</td><td>GPA 3.6&ndash;4.0 weighted typical, SAT 1170&ndash;1390 range</td><td>No dedicated major &mdash; general Mechanical Engineering only</td><td>Not rank-dependent &mdash; most accessible of the group</td></tr>
+                <tr><td>5</td><td>SMU</td><td>GPA 3.53&ndash;3.94 middle 50%, SAT 1320&ndash;1480 if submitted</td><td>No dedicated major</td><td>No &mdash; private, holistic</td></tr>
+                <tr><td>6</td><td>UT Arlington</td><td>Not this app's CS focus &mdash; large engineering college, more accessible overall</td><td>Dedicated Aerospace Engineering BS, top 50&ndash;60 nationally</td><td>Not rank-dependent</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>1. Rice University <span class="tutoring-status-badge">Most prestigious, private</span></h2>
+          <p class="teacher-detail">Computer Science &middot; Houston, TX &middot; ~8% acceptance rate &middot; test-optional</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>GPA</td><td>Competitive applicants ~3.8+ unweighted; average admit ~3.96, near top 10% of class</td></tr>
+              <tr><td>SAT</td><td>Test-optional, but middle 50% of submitters is 1510&ndash;1570 &mdash; aim 1550+ if submitting</td></tr>
+              <tr><td>ACT</td><td>Middle 50% 34&ndash;36 if submitting &mdash; aim 35+</td></tr>
+              <tr><td>Structure note</td><td>Applies to one of six undergrad schools at application time (Engineering for CS) &mdash; academic strength alone rarely separates candidates since the pool is uniformly strong</td></tr>
+              <tr><td>Cost note</td><td>Worth checking &mdash; Rice's own aid program covers full tuition for families under ~$75k and reduced tuition up to ~$200k, a notably higher aid threshold than most peer privates. Worth confirming against our actual family income before assuming full sticker.</td></tr>
+              <tr><td>Aerospace fit</td><td><strong>No dedicated Aerospace Engineering major.</strong> Only an aerospace specialization track within Mechanical Engineering at undergrad; dedicated Aerospace degrees exist at the Master's level only. Weakens Rice specifically if Aerospace ends up the stronger interest.</td></tr>
+            </tbody>
+          </table>
           <p class="tutoring-note">
-            Candidates to research first: UT Austin, Texas A&amp;M, Rice University.
+            <strong>Focus now:</strong> since "academic strength alone rarely separates candidates" here, the
+            differentiator is everything <em>around</em> the transcript &mdash; sustained depth in one or two areas
+            (e.g. a real CS project, competitive programming, research) matters more than breadth &middot; keep GPA at
+            the very top of her class, since Rice's applicant pool is uniformly near-4.0 &middot; because it's
+            test-optional, a strong SAT/ACT score is a genuine differentiator here, not just a formality.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>2. UT Austin &mdash; Computer Science / Turing Scholars <span class="tutoring-status-badge">Top CS program, public</span></h2>
+          <p class="teacher-detail">Department of Computer Science &middot; Austin, TX &middot; CS direct-admit acceptance ~5&ndash;8% &middot; one of the most competitive public CS programs nationally</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>GPA</td><td>Admitted profile: 4.0 unweighted typical</td></tr>
+              <tr><td>Class rank</td><td>Top 1&ndash;3% for direct-admit CS &middot; top 6% only auto-admits to <em>UT Austin generally</em>, not to CS &mdash; CS remains separately competitive even for auto-admits</td></tr>
+              <tr><td>SAT</td><td>Admitted range 1500&ndash;1560</td></tr>
+              <tr><td>Portfolio</td><td>Substantive programming portfolio expected &middot; multiple AP STEM courses with 5s strengthens the file</td></tr>
+              <tr><td>Turing Scholars (honors CS)</td><td>Even higher bar &mdash; top 2% class rank, SAT ~1540+/ACT 34+, near-4.0, prior research or competitive programming preferred. Applied for at the same time as general admission.</td></tr>
+              <tr><td>Aerospace fit</td><td><strong>Genuinely strong</strong> &mdash; #2 in Texas for Aerospace/Aeronautical Engineering, top 10 nationally for some specialties (Cockrell School). One of only two real in-state options for dedicated Aerospace.</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Focus now:</strong> class rank is the single biggest lever &mdash; top 6% alone won't secure CS, so
+            the real target is top 1&ndash;3% specifically &middot; start building a genuine programming portfolio now
+            (personal projects, competitive programming like USACO, hackathons) since this is explicitly evaluated,
+            not just GPA/scores &middot; take AP Computer Science A early enough to also fit in AP-level follow-on
+            coursework or independent projects before senior year &middot; consider applying to Turing Scholars
+            alongside general admission once the time comes &mdash; it's the flagship honors track and doesn't require
+            a separate application cycle.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>3. Texas A&amp;M University <span class="tutoring-status-badge">Strong engineering, public flagship</span></h2>
+          <p class="teacher-detail">Computer Science &amp; Engineering &middot; College Station, TX &middot; large public flagship, holistic direct-to-major CS admission</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>GPA</td><td>No strict minimum &mdash; holistic, but average admit ~3.67, leaning toward A's</td></tr>
+              <tr><td>SAT/ACT</td><td>Test-optional for 2026-27 &middot; university-wide middle 50% is 1160&ndash;1390/24&ndash;32, but CS/engineering applicants skew well above that average</td></tr>
+              <tr><td>Top 10% rule</td><td>Automatic admission to the university for TX residents in the top 10% meeting course requirements &mdash; does NOT guarantee CS placement</td></tr>
+              <tr><td>CS admission path</td><td>Apply directly to CS as intended major (competitive, holistic) &middot; some students enter via General Engineering and compete for CS placement later if not directly admitted &middot; National Merit Semifinalists get direct major placement as of Fall 2025</td></tr>
+              <tr><td>Aerospace fit</td><td><strong>Best in Texas for Aerospace.</strong> Undergrad program ranked #6 among publics, top 15 nationally overall &mdash; genuinely stronger than UT Austin's on pure ranking. Same direct-to-major competitive path applies as CS.</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Focus now:</strong> top 10% class rank is a good baseline safety net for A&amp;M generally, but
+            don't rely on it for CS specifically &mdash; apply to CS as the intended major directly rather than
+            planning on a General Engineering entry-and-compete path &middot; National Merit Semifinalist status (via
+            PSAT in junior year) is a real, concrete lever worth prepping for since it now grants direct CS placement
+            &mdash; worth a serious look at PSAT prep timing.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>4. UT Dallas <span class="tutoring-status-badge">CS-focused reputation, accessible</span></h2>
+          <p class="teacher-detail">Computer Science &middot; Richardson, TX &middot; ~65% acceptance rate &middot; known for CS program strength relative to overall selectivity</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>GPA</td><td>Minimum ~3.0, but most admits are 3.5&ndash;4.0 (weighted 3.6&ndash;4.0 typical)</td></tr>
+              <tr><td>SAT</td><td>Competitive range 1170&ndash;1390 &middot; Math specifically 580&ndash;720</td></tr>
+              <tr><td>ACT</td><td>Competitive range 24&ndash;32, enrolled middle 50% 25&ndash;32</td></tr>
+              <tr><td>Note</td><td>Scoring at/above the midpoint specifically strengthens CS applications, since it's one of the higher-demand programs here</td></tr>
+              <tr><td>Aerospace fit</td><td><strong>No dedicated Aerospace Engineering major.</strong> Only a Defense &amp; Aerospace Systems concentration within a Master's-level Systems Engineering program, plus general Mechanical Engineering. Not a real undergrad aerospace option.</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Focus now:</strong> this is the highest-probability solid option on the list given her current
+            trajectory &mdash; still worth aiming for the upper end of the range (SAT 1350+, GPA 3.8+) rather than just
+            clearing the bar, since that also unlocks honors college and merit scholarship consideration.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>5. SMU <span class="tutoring-status-badge">Private, solid safety option</span></h2>
+          <p class="teacher-detail">Computer Science &middot; Dallas, TX &middot; test-optional &middot; private</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>GPA</td><td>Middle 50% of admits: 3.53&ndash;3.94, average ~3.7</td></tr>
+              <tr><td>SAT</td><td>Test-optional &middot; middle 50% if submitted: 1320&ndash;1480</td></tr>
+              <tr><td>ACT</td><td>Middle 50% if submitted: 29&ndash;33</td></tr>
+              <tr><td>Note</td><td>General university figures &mdash; CS-specific admission data not found yet, worth confirming CS program reputation/strength directly with SMU before treating as a serious target</td></tr>
+              <tr><td>Aerospace fit</td><td><strong>No dedicated Aerospace Engineering major.</strong> Lyle School offers Civil, Computer, Electrical, Mechanical, and Operations Research Engineering only &mdash; "Aerospace Studies" at SMU is Air Force ROTC (military science), not an engineering degree.</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Focus now:</strong> comfortably within reach given her trajectory &mdash; worth keeping on the list
+            specifically as a merit-aid candidate (private schools in this selectivity band often compete for strong
+            applicants with real scholarship money, similar to the Muhlenberg/Denison pattern from the 3+2 research)
+            rather than as an academic stretch. If Aerospace becomes her stronger interest, SMU drops off this list
+            entirely &mdash; it has no fit for that major at all.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>6. UT Arlington <span class="tutoring-status-badge">Added for Aerospace fit</span></h2>
+          <p class="teacher-detail">Dedicated Bachelor of Science in Aerospace Engineering &middot; Arlington, TX &middot; large College of Engineering, practical/industry-connected focus</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>Why it's here</td><td>The one additional Texas school with a genuine, dedicated undergraduate Aerospace Engineering degree beyond UT Austin and Texas A&amp;M &mdash; added specifically because of the aerospace pivot, not for CS</td></tr>
+              <tr><td>Aerospace ranking</td><td>Consistently ranked top 50&ndash;60 nationally for Aerospace Engineering &mdash; solid and respectable, but clearly a notch below UT Austin/Texas A&amp;M's tier</td></tr>
+              <tr><td>Admission bar</td><td>General College of Engineering admission requirements apply (no separately competitive aerospace-specific bar found) &mdash; meaningfully more accessible than UT Austin or Texas A&amp;M</td></tr>
+              <tr><td>CS note</td><td>Not a CS-focused pick &mdash; if CS ends up the stronger interest, this school doesn't carry the same weight it does for Aerospace</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Focus now:</strong> think of this as the accessible-safety option specifically for Aerospace,
+            the way UT Dallas functions for CS &mdash; worth keeping on the list as a lower-risk anchor while she
+            aims higher at UT Austin/Texas A&amp;M for Aerospace specifically, not as a first choice.
           </p>
         </section>
       </div>
 
       <div id="outstate-panel" class="tab-panel" hidden>
         <p class="tutoring-note teacher-intro">
-          Non-Texas US schools with direct freshman admission (no 3+2 detour, no
-          international affiliation). Not researched yet.
+          Non-Texas US schools with direct freshman admission, ranked for a dual
+          Computer Science + Aerospace Engineering fit &mdash; both fields are strong at all four,
+          not a compromise between them.
         </p>
+
         <section class="card">
-          <h2>Not started yet <span class="tutoring-status-badge">TODO</span></h2>
+          <h2>Quick Comparison</h2>
+          <div class="table-scroll">
+            <table class="tutoring-table">
+              <thead><tr><th>Rank</th><th>School</th><th>CS strength</th><th>Aerospace strength</th><th>Out-of-state bar</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>Georgia Tech</td><td>Top 5&ndash;10 &mdash; elite</td><td>Guggenheim School, #1 public grad program &mdash; elite</td><td>Toughest of the four &mdash; CS/Aero admit rates in single digits out-of-state</td></tr>
+                <tr><td>2</td><td>Purdue</td><td>Top 16&ndash;20</td><td>Top 8 nationally &mdash; storied heritage (Armstrong, Cernan)</td><td>Most accessible of the four for these majors</td></tr>
+                <tr><td>3</td><td>Michigan</td><td>Top 10&ndash;15</td><td>Top 5</td><td>Very selective out-of-state overall (~6&ndash;18%)</td></tr>
+                <tr><td>4</td><td>UIUC</td><td>Top 5&ndash;10 &mdash; elite</td><td>Solid, respected (not the standout here &mdash; CS/ECE is)</td><td>CS/Engineering behave like reaches regardless of residency</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>1. Georgia Tech <span class="tutoring-status-badge">Elite in both, toughest bar</span></h2>
+          <p class="teacher-detail">College of Computing (CS) + Daniel Guggenheim School of Aerospace Engineering &middot; Atlanta, GA &middot; admits by major</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>GPA</td><td>Competitive out-of-state: 3.9+ unweighted &middot; most rigorous course load (8&ndash;12 AP/IB) &middot; avg admit 4.14 weighted, 92.5% at 4.0+</td></tr>
+              <tr><td>SAT/ACT</td><td>Admitted mid-50%: SAT 1430&ndash;1540, ACT 33&ndash;35 &middot; out-of-state target: SAT 1530+/ACT 35+ (75th percentile)</td></tr>
+              <tr><td>Out-of-state acceptance</td><td>~9% overall, but CS specifically ~4&ndash;6% and Aerospace also single digits out-of-state &mdash; Georgia Tech admits by major, so the published rate understates real competition for these two</td></tr>
+            </tbody>
+          </table>
           <p class="tutoring-note">
-            Candidates to research first: Georgia Tech, Purdue, UIUC, University of Michigan.
+            <strong>Focus now:</strong> this is the toughest bar on the whole app outside of Caltech/MIT-tier reaches
+            &mdash; both her target majors are simultaneously among Georgia Tech's most competitive, so there's no
+            "easier major" fallback within the school &middot; needs the full package: top-of-scale GPA, 75th-percentile+
+            test scores, and a genuine project/research portfolio in whichever direction (CS or Aerospace) she leans
+            harder &middot; treat as a reach, not a target, even with a strong profile.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>2. Purdue <span class="tutoring-status-badge">Most accessible of the four</span></h2>
+          <p class="teacher-detail">College of Science (CS) + School of Aeronautics and Astronautics &middot; West Lafayette, IN &middot; storied aerospace heritage (Neil Armstrong, Gene Cernan)</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>GPA</td><td>Competitive non-resident, high-demand majors: unweighted 3.9+ typical &middot; CS admits commonly 3.80&ndash;4.0</td></tr>
+              <tr><td>SAT/ACT</td><td>Engineering: SAT 1380&ndash;1520/ACT 32&ndash;35 &middot; CS specifically: SAT 1420&ndash;1540 &middot; "test-expected," not optional in practice</td></tr>
+              <tr><td>Program acceptance</td><td>CS ~44.7%, Aerospace ~46.2% &mdash; notably more accessible than Georgia Tech's single digits for the same majors, despite Purdue's strong reputation in both</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Focus now:</strong> the best risk-adjusted pick on this tab &mdash; genuinely elite Aerospace
+            reputation and strong CS, but admission odds are far better than Georgia Tech for a similar academic
+            profile &middot; strong AP performance in math/science specifically is called out as a real factor here,
+            not just a checkbox &middot; worth treating as a realistic target rather than a reach.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>3. University of Michigan <span class="tutoring-status-badge">Strong both, selective out-of-state</span></h2>
+          <p class="teacher-detail">College of Engineering (CS &amp; Aerospace Engineering) &middot; Ann Arbor, MI</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>GPA</td><td>Admitted students typically 3.9&ndash;4.0 unweighted, 38%+ at a perfect 4.0</td></tr>
+              <tr><td>SAT/ACT</td><td>Class of 2029 middle 50%: SAT 1360&ndash;1530 (median 1460), ACT 31&ndash;34 &middot; test-optional but scores function as a real differentiator for out-of-state applicants</td></tr>
+              <tr><td>Out-of-state acceptance</td><td>~6&ndash;18% depending on the cycle/source, vs. ~39% in-state &mdash; a large gap, engineering/CS among the most competitive divisions</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Focus now:</strong> similar academic bar to Georgia Tech but slightly better odds &mdash; since
+            it's "test-optional but not really" for out-of-state applicants, plan to submit strong scores rather than
+            skip them &middot; Michigan's Aerospace program (top 5) is arguably the strongest single differentiator
+            here if she leans that direction.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>4. UIUC <span class="tutoring-status-badge">Elite CS, solid Aerospace</span></h2>
+          <p class="teacher-detail">Grainger College of Engineering &middot; Urbana-Champaign, IL &middot; CS/ECE is the headline strength here, not Aerospace</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>GPA</td><td>Admitted pool: 3.65&ndash;4.0 unweighted</td></tr>
+              <tr><td>SAT/ACT</td><td>Middle 50%: SAT 1420&ndash;1540, ACT 31&ndash;35 &middot; test-optional, but only ~60% of admits submit scores</td></tr>
+              <tr><td>Program acceptance</td><td>Overall ~60% (looks accessible), but CS and Engineering specifically admit fewer than 10% of applicants regardless of residency &mdash; "a target overall, a reach for CS/Engineering"</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Focus now:</strong> if CS is the stronger of her two interests, UIUC's CS program is genuinely
+            top-5-10 nationally and worth the reach-level effort &middot; if Aerospace is the stronger interest,
+            Purdue or Michigan are better-matched picks &mdash; UIUC's Aerospace program is solid but not the
+            standout reason to choose this school.
           </p>
         </section>
       </div>
@@ -86,6 +319,7 @@
               <tr><td>Prerequisite coursework</td><td>Full Calculus sequence (through multivariable/Calc III&ndash;IV), 2&ndash;3 semesters Physics, General Chemistry + one lab, one Computer Science course, Intro Economics, ~27 nontechnical credits &mdash; completed at the partner college</td></tr>
               <tr><td>GPA to transfer</td><td>~3.0+ minimum overall and in pre-engineering coursework (exact bar varies by partner school &mdash; confirm with the specific affiliate)</td></tr>
               <tr><td>Application</td><td>Submitted via Columbia's application in winter of junior year of college &middot; opens December, preferred deadline mid-Feb, final mid-March, decisions mid-April, fall entry only</td></tr>
+              <tr><td>Aerospace fit</td><td><strong>Not yet available as a major.</strong> Columbia Engineering currently only offers an Aerospace Engineering minor (first graduates were this year); a full major, master's concentration, and grad program are "expected in coming semesters" but not live yet. Don't plan around Columbia for Aerospace until the major actually launches.</td></tr>
             </tbody>
           </table>
           <p class="tutoring-note">
@@ -152,40 +386,47 @@
           <h2>Other 3+2 Sponsor Schools <span class="tutoring-status-badge">Landscape scan, not yet built out</span></h2>
           <p class="tutoring-note">
             Columbia isn't the only 3+2 sponsor. Quick landscape from research so far &mdash; none of these have full
-            cards yet, flag if any should be built out next.
+            cards yet, flag if any should be built out next. Aerospace fit added given the dual-focus pivot &mdash;
+            <strong>Georgia Tech is the standout here</strong> for combining both interests.
           </p>
-          <table class="tutoring-table">
-            <tbody>
-              <tr><td>Caltech</td><td>13 partner LACs (small network) &middot; 1&ndash;2 yrs calc-based physics/math, multivariable calc, diff eq, 1 yr chem &middot; apply junior year only &middot; ~30&ndash;40% of eligible pool, but very few seats total &mdash; long shot even among reach options</td></tr>
-              <tr><td>Dartmouth (Thayer)</td><td>Ivy League &middot; GPA 3.5+ &middot; apply by Feb 1 of junior year &middot; also offers a longer "2-1-1-1" structure, not just 3-2</td></tr>
-              <tr><td>Georgia Tech</td><td>GPA 3.3 for CS/Engineering (3.0 other majors) + separate Math/Science GPA &middot; top 5&ndash;10 national engineering reputation, most accessible bar of the top-tier brands</td></tr>
-              <tr><td>Case Western Reserve</td><td>40+ partner LACs, widest network after Columbia &middot; specific GPA bar not yet confirmed</td></tr>
-              <tr><td>Washington University (McKelvey)</td><td>GPA 3.25 overall + math/science &middot; often a "3-3" structure (BS+MS, 6 years total), not a straight 5-year 3-2 &mdash; worth noting the extra year</td></tr>
-              <tr><td>Notre Dame</td><td>16+ partner schools, but GPA bar varies widely by specific partner (2.8&ndash;3.6+) since each partnership is separately negotiated</td></tr>
-              <tr><td>RPI / USC</td><td>Listed as 3+2 sponsors but admission-bar specifics not yet researched</td></tr>
-              <tr><td>Duke</td><td><strong>Not a real match</strong> &mdash; Trinity/Pratt is an internal Duke-to-Duke transfer, not an external-partner 3+2</td></tr>
-            </tbody>
-          </table>
+          <div class="table-scroll">
+            <table class="tutoring-table">
+              <thead><tr><th>School</th><th>Admission bar</th><th>Aerospace fit</th></tr></thead>
+              <tbody>
+                <tr><td>Caltech</td><td>13 partner LACs (small network) &middot; 1&ndash;2 yrs calc-based physics/math, multivariable calc, diff eq, 1 yr chem &middot; apply junior year only &middot; ~30&ndash;40% of eligible pool, but very few seats total &mdash; long shot even among reach options</td><td>Only a <strong>minor</strong> at undergrad, not a full major &mdash; grad program (GALCIT) is legendary, but doesn't help at the 3+2 BS stage</td></tr>
+                <tr><td>Dartmouth (Thayer)</td><td>Ivy League &middot; GPA 3.5+ &middot; apply by Feb 1 of junior year &middot; also offers a longer "2-1-1-1" structure, not just 3-2</td><td>General "Engineering Sciences" BA/BE, not a dedicated Aerospace major &mdash; broad, not aerospace-specific</td></tr>
+                <tr><td><strong>Georgia Tech</strong></td><td>GPA 3.3 for CS/Engineering (3.0 other majors) + separate Math/Science GPA &middot; top 5&ndash;10 national engineering reputation, most accessible bar of the top-tier brands</td><td><strong>Elite &mdash; Daniel Guggenheim School of Aerospace Engineering, #1 among public grad programs.</strong> Best dual CS+Aerospace fit of any 3+2 sponsor</td></tr>
+                <tr><td>Case Western Reserve</td><td>40+ partner LACs, widest network after Columbia &middot; specific GPA bar not yet confirmed</td><td>Not yet researched for aerospace specifically</td></tr>
+                <tr><td>Washington University (McKelvey)</td><td>GPA 3.25 overall + math/science &middot; often a "3-3" structure (BS+MS, 6 years total), not a straight 5-year 3-2 &mdash; worth noting the extra year</td><td>General Mechanical Engineering &mdash; no dedicated Aerospace major found</td></tr>
+                <tr><td>Notre Dame</td><td>16+ partner schools, but GPA bar varies widely by specific partner (2.8&ndash;3.6+) since each partnership is separately negotiated</td><td>Aerospace &amp; Mechanical Engineering department, appears in national aerospace rankings &mdash; solid, respectable</td></tr>
+                <tr><td>RPI / USC</td><td>Listed as 3+2 sponsors but admission-bar specifics not yet researched</td><td>Not yet researched</td></tr>
+                <tr><td>Duke</td><td><strong>Not a real match</strong> &mdash; Trinity/Pratt is an internal Duke-to-Duke transfer, not an external-partner 3+2</td><td>N/A</td></tr>
+              </tbody>
+            </table>
+          </div>
         </section>
       </div>
 
       <div id="international-panel" class="tab-panel" hidden>
         <p class="tutoring-note teacher-intro">
           International direct-entry options, plus US-degree programs built around an
-          international partner university.
+          international partner university. <strong>Aerospace changes the ranking here more than
+          anywhere else on the app:</strong> TU Delft's Aerospace Engineering faculty is ranked
+          <strong>#10 globally</strong> (ARWU 2025), sitting alongside MIT, Cambridge, and Stanford &mdash;
+          arguably an even bigger draw than its already-strong CS program if Aerospace is a real interest.
         </p>
 
         <section class="card">
           <h2>Quick Comparison</h2>
           <div class="table-scroll">
             <table class="tutoring-table">
-              <thead><tr><th>College</th><th>What decides admission</th><th>Est. cost (full degree)</th><th>Key deadline</th></tr></thead>
+              <thead><tr><th>College</th><th>What decides admission</th><th>Aerospace fit</th><th>Est. cost (full degree)</th><th>Key deadline</th></tr></thead>
               <tbody>
-                <tr><td>Monash (Software Eng. Hons)</td><td>GPA + SAT/ACT</td><td>~$218,000 (4 yr)</td><td>Rolling &mdash; apply senior year</td></tr>
-                <tr><td>TU Delft (CS&amp;E)</td><td>Own CST exam + lottery (grades not used)</td><td>~$105,000&ndash;115,000 (3 yr)</td><td>Jan 15, fixed</td></tr>
-                <tr><td>KAIST</td><td>Holistic (essay + transcript + optional tests)</td><td>~$0 tuition (fully funded) + living</td><td>Early Oct 22 / Regular Jan 14</td></tr>
-                <tr><td>Columbia + &Eacute;cole Polytechnique</td><td>Holistic, applied via &Eacute;cole Polytechnique directly</td><td>Polytechnique tuition (~free/EU-subsidized) + Columbia M.Eng cost for 2 yrs</td><td>3 rounds: Oct 30 / Jan 5 / Feb 9</td></tr>
-                <tr><td>UConn Int'l Engineering Program</td><td>Normal UConn freshman admission (much less selective)</td><td>UConn in-state/out-of-state tuition, 5 yrs</td><td>Regular UConn freshman deadline</td></tr>
+                <tr><td>Monash (Software Eng. Hons)</td><td>GPA + SAT/ACT</td><td>Dedicated Aerospace Engineering (Honours) degree also offered at Monash</td><td>~$218,000 (4 yr)</td><td>Rolling &mdash; apply senior year</td></tr>
+                <tr><td><strong>TU Delft</strong></td><td>Own CST exam + lottery (grades not used)</td><td><strong>World #10 in Aerospace</strong> (ARWU 2025) &mdash; a standout, not just a CS school</td><td>~$105,000&ndash;115,000 (3 yr)</td><td>Jan 15, fixed</td></tr>
+                <tr><td>KAIST</td><td>Holistic (essay + transcript + optional tests)</td><td>Dedicated 4-year Bachelor in Aerospace Engineering, strong department</td><td>~$0 tuition (fully funded) + living</td><td>Early Oct 22 / Regular Jan 14</td></tr>
+                <tr><td>Columbia + &Eacute;cole Polytechnique</td><td>Holistic, applied via &Eacute;cole Polytechnique directly</td><td>Not the Math+CS track &mdash; the separate Math+Engineering/Physics double-track is the aerospace-relevant one, not yet fully confirmed</td><td>Polytechnique tuition (~free/EU-subsidized) + Columbia M.Eng cost for 2 yrs</td><td>3 rounds: Oct 30 / Jan 5 / Feb 9</td></tr>
+                <tr><td>UConn Int'l Engineering Program</td><td>Normal UConn freshman admission (much less selective)</td><td>UConn's Mechanical Engineering dept. became the School of Mechanical, Aerospace &amp; Manufacturing Engineering in 2023 &mdash; confirm undergrad-level Aerospace track availability with the program office</td><td>UConn in-state/out-of-state tuition, 5 yrs</td><td>Regular UConn freshman deadline</td></tr>
               </tbody>
             </table>
           </div>
@@ -202,6 +443,7 @@
               <tr><td>SAT/ACT</td><td>Highest of either used &middot; target 1350&ndash;1400+ composite, 700+ on Math</td></tr>
               <tr><td>English test</td><td>IELTS 6.5 / TOEFL 79 / PTE 58 &mdash; likely waived (US English-medium school), confirm at application</td></tr>
               <tr><td>Deadline</td><td>No fixed date &mdash; apply direct with predicted grades, confirm with final transcript. Semester 1 (Feb/Mar) start lines up with June graduation.</td></tr>
+              <tr><td>Aerospace fit</td><td>Monash also offers a dedicated <strong>Bachelor of Aerospace Engineering (Honours)</strong> at Clayton &mdash; same campus, similar admission bar to Software Engineering, real wind-tunnel/computational-modeling coursework</td></tr>
             </tbody>
           </table>
           <p class="tutoring-note">
@@ -212,7 +454,7 @@
         </section>
 
         <section class="card">
-          <h2>TU Delft <span class="tutoring-status-badge">Jan 15 fixed deadline</span></h2>
+          <h2>TU Delft <span class="tutoring-status-badge">World #10 in Aerospace</span></h2>
           <p class="teacher-detail">BSc Computer Science &amp; Engineering &middot; Delft, Netherlands &middot; 3 years &middot; Numerus fixus (590 seats/yr, 345 English track)</p>
           <table class="tutoring-table">
             <tbody>
@@ -221,6 +463,7 @@
               <tr><td>English test</td><td>TOEFL iBT 90+ or IELTS 6.5+ &mdash; confirm if a US-schooling waiver applies</td></tr>
               <tr><td>SAT/ACT</td><td>Not used at all</td></tr>
               <tr><td>Grades</td><td>NOT used in ranking &mdash; admission is decided entirely by the test below + a lottery draw</td></tr>
+              <tr><td>Aerospace fit</td><td><strong>TU Delft's Faculty of Aerospace Engineering ranks #10 globally</strong> (ARWU 2025), 3rd worldwide in QS's Mechanical/Aeronautical/Manufacturing category &mdash; alongside MIT, Cambridge, Stanford. This is a genuinely separate, equally strong bachelor's (BSc Aerospace Engineering) with its own numerus fixus &amp; CST process, similar structure to the CS&amp;E program above.</td></tr>
             </tbody>
           </table>
           <p class="tutoring-note">
@@ -241,7 +484,7 @@
 
         <section class="card">
           <h2>KAIST <span class="tutoring-status-badge">Fully funded</span></h2>
-          <p class="teacher-detail">Undergraduate, Computer Science track &middot; Daejeon, South Korea &middot; 4 years &middot; Holistic admission</p>
+          <p class="teacher-detail">Undergraduate, Computer Science <em>or</em> Aerospace Engineering track &middot; Daejeon, South Korea &middot; 4 years &middot; Holistic admission</p>
           <table class="tutoring-table">
             <tbody>
               <tr><td>Application</td><td>Transcripts, personal statement, study plan/essay, up to 2 recommendation letters (optional but recommended)</td></tr>
@@ -249,6 +492,7 @@
               <tr><td>English test</td><td>TOEFL iBT 83 / IELTS 6.5+ &mdash; likely waived for US English-medium schooling with documentation</td></tr>
               <tr><td>Interview</td><td>Only if specifically requested by KAIST &mdash; not standard</td></tr>
               <tr><td>Deadlines</td><td>Early Admission: docs due ~Oct 22 &middot; Regular Admission: ~Jan 14</td></tr>
+              <tr><td>Aerospace fit</td><td>KAIST offers a dedicated <strong>4-year Bachelor in Aerospace Engineering</strong> &mdash; same admission process/holistic bar as CS, world-class department, plays a real role in South Korea's aerospace R&amp;D. Same fully-funded structure applies.</td></tr>
             </tbody>
           </table>
           <p class="tutoring-note">
@@ -281,6 +525,7 @@
               <tr><td>Admission</td><td>Holistic: HS diploma/IB or equivalent, strong math/science record, personal statement + CV, two referees, &euro;95 fee. One application covers both the Polytechnique-only BS and the Columbia BS/MS track &mdash; final track choice happens in Semester 2.</td></tr>
               <tr><td>English</td><td>C1 level required &mdash; TOEFL iBT 90+ / IELTS 6.5+, exemption possible for 2+ years fully English-medium schooling (should cover her US high school)</td></tr>
               <tr><td>Deadlines (rolling rounds)</td><td>Round 1: Oct 30 (decisions Feb) &middot; Round 2: Jan 5 (decisions Apr) &middot; Round 3: Feb 9 (decisions May)</td></tr>
+              <tr><td>Aerospace fit</td><td>Not the Math+CS track &mdash; the <strong>Math+Engineering/Physics double-track</strong> is the aerospace-relevant one at &Eacute;cole Polytechnique (historically strong in aeronautics via ties to ONERA/French aerospace industry), but its specific aerospace content isn't confirmed yet. On the Columbia side, none of the 9 M.Eng tracks are Aerospace (Columbia Engineering doesn't have that major yet &mdash; see the 3+2 tab). Worth deeper research if Aerospace becomes the stronger interest.</td></tr>
             </tbody>
           </table>
           <p class="tutoring-note">
@@ -307,6 +552,7 @@
               <tr><td>Language prerequisite</td><td>None &mdash; true beginners start from scratch (e.g. German 1001); students with 3+ years of HS language start more advanced</td></tr>
               <tr><td>Structure</td><td>One full year abroad in total immersion, typically between junior and senior year</td></tr>
               <tr><td>Admission bar / deadlines</td><td>Not published online &mdash; GPA and program-specific deadlines require contacting the program office directly (International Engineering Program, 191 Auditorium Road, Unit 3187, Storrs, CT 06269)</td></tr>
+              <tr><td>Aerospace fit</td><td>UConn's Mechanical Engineering department was renamed the <strong>School of Mechanical, Aerospace, and Manufacturing Engineering</strong> in Nov 2023, so Aerospace is now a real specialization there &mdash; but the department's own pages emphasize Ph.D./M.S./M.Eng., so undergrad-level Aerospace availability (and whether it combines with Eurotech/Technopole/AsiaTech) needs direct confirmation with the program office.</td></tr>
             </tbody>
           </table>
           <p class="tutoring-note">
@@ -316,6 +562,131 @@
             need to front-load language study in high school, since true beginners are supported &middot; contact the
             program office directly once she's shortlisting UConn to confirm current GPA/retention requirements and
             whether AsiaTech pairs cleanly with a Computer Science major.
+          </p>
+        </section>
+      </div>
+
+      <div id="uscampuses-panel" class="tab-panel" hidden>
+        <p class="tutoring-note teacher-intro">
+          Full degree-granting international campuses of US universities (e.g. NYU Abu Dhabi) &mdash;
+          not exchange/study-abroad, an actual four-year degree earned on the overseas campus.
+          <strong>None of these offer a dedicated Aerospace Engineering major</strong> &mdash; this tab is
+          effectively CS-only within the dual-focus lens; flagged per school below.
+        </p>
+
+        <section class="card">
+          <h2>Quick Comparison</h2>
+          <div class="table-scroll">
+            <table class="tutoring-table">
+              <thead><tr><th>Rank</th><th>School</th><th>CS availability</th><th>Admission bar</th><th>Cost model</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>NYU Abu Dhabi</td><td>Yes, full CS (BS)</td><td>~4% acceptance &mdash; GPA 3.8+, SAT 1450&ndash;1560</td><td>Need-blind, often full-ride via generous need-based aid</td></tr>
+                <tr><td>2</td><td>Carnegie Mellon Qatar</td><td>Yes &mdash; same CS degree as Pittsburgh</td><td>GPA 3.5&ndash;4.0, test-optional (major/curriculum dependent)</td><td>Need-blind, need-based grants up to full cost; Qatar Foundation-subsidized</td></tr>
+                <tr><td>3</td><td>NYU Shanghai</td><td>Yes, full CS</td><td>~7% acceptance (tighter than NYU NY's 13%), specific GPA/SAT not published separately</td><td>Same NYU aid system as NY/Abu Dhabi campuses</td></tr>
+                <tr><td>4</td><td>Duke Kunshan</td><td>CS-adjacent &mdash; "Applied Math &amp; Computational Sciences" with a CS track, not a standalone CS major</td><td>GPA 3.5+, SAT 1520&ndash;1550 competitive (optional)</td><td>Dual Duke + DKU degree, need to verify aid separately</td></tr>
+                <tr><td>5</td><td>Texas A&amp;M Qatar</td><td><strong>No CS major at all</strong></td><td>Not researched (weak fit, included for completeness)</td><td>Qatar Foundation-subsidized like CMU-Q</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>1. NYU Abu Dhabi <span class="tutoring-status-badge">~4% acceptance, generous aid</span></h2>
+          <p class="teacher-detail">Computer Science (BS) &middot; Abu Dhabi, UAE &middot; part of NYU's Global Network University &middot; liberal-arts core</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>GPA</td><td>Successful applicants typically 3.7+; American-curriculum admits closer to 3.8+ unweighted</td></tr>
+              <tr><td>SAT/ACT</td><td>Test-optional &middot; middle 50% of enrolled: SAT 1450&ndash;1560 / ACT 33&ndash;35</td></tr>
+              <tr><td>Acceptance rate</td><td>~4% &mdash; one of the most selective universities globally, more selective than NYU's New York campus</td></tr>
+              <tr><td>Financial aid</td><td><strong>Need-blind admission</strong>, with merit scholarships automatically considered and need-based aid (via CSS Profile) that can cover full tuition, housing, meals, travel, health insurance, textbooks, and a stipend for qualifying families</td></tr>
+              <tr><td>Aerospace fit</td><td>No dedicated Aerospace major &mdash; NYU doesn't offer Aerospace Engineering anywhere in its system (Tandon's Engineering programs are Mechanical/Electrical/Computer/Civil/Biomedical)</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Focus now:</strong> the financial aid model here is genuinely differentiated &mdash; worth
+            confirming our family's CSS Profile eligibility directly, since "need-blind + full-ride-capable" is rare
+            among schools already covered on this app &middot; academically the bar is essentially Ivy-tier, so the
+            same portfolio-and-rigor strategy as Rice/UT Austin CS applies &middot; the liberal-arts-core structure
+            means strong writing/humanities performance matters here more than at a pure engineering school.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>2. Carnegie Mellon Qatar <span class="tutoring-status-badge">CMU's CS brand, small campus</span></h2>
+          <p class="teacher-detail">Computer Science &middot; Doha, Qatar (Education City) &middot; same degree/rigor as CMU Pittsburgh, only 5 majors offered campus-wide</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>Majors offered</td><td>Only five: Biological Sciences, Computer Science, Business Administration, Information Systems, Computational Biology &mdash; all built on an Arts &amp; Sciences foundation</td></tr>
+              <tr><td>GPA</td><td>Admitted students typically 3.5&ndash;4.0</td></tr>
+              <tr><td>SAT/ACT</td><td>Test-optional policy, though requirement varies by intended major and secondary curriculum for upcoming cycles &mdash; confirm current policy at application time</td></tr>
+              <tr><td>English</td><td>TOEFL/IELTS/Duolingo required unless a waiver applies</td></tr>
+              <tr><td>Cost</td><td>Tuition matches Pittsburgh (~$58,000/yr) but is heavily offset &mdash; need-blind admission with need-based grants up to full cost of attendance, plus merit scholarships funded by Qatar Foundation, which also subsidizes the campus directly (~$50&ndash;60M/yr)</td></tr>
+              <tr><td>Aerospace fit</td><td>No Aerospace major &mdash; not offered anywhere at CMU, including Pittsburgh</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Focus now:</strong> this gets the actual CMU Computer Science degree (routinely ranked world
+            #1&ndash;2) on a much smaller, more specialized campus &mdash; worth it specifically if CS is the clear
+            primary interest, since there's no Aerospace or general-engineering fallback if interests shift &middot;
+            the same rigorous CS-portfolio prep as UT Austin/Georgia Tech applies here.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>3. NYU Shanghai <span class="tutoring-status-badge">Tighter than NYU NY</span></h2>
+          <p class="teacher-detail">Computer Science &middot; Shanghai, China &middot; part of NYU's Global Network University, joint venture with East China Normal University</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>Acceptance rate</td><td>~7% for the Class of 2027 &mdash; notably tighter than NYU New York's ~13%</td></tr>
+              <tr><td>Class composition</td><td>~500 spots/class, half reserved for China/Hong Kong/Macao/Taiwan students, remainder international (~53% of that pool from the US)</td></tr>
+              <tr><td>GPA/SAT/ACT</td><td>Shanghai-specific figures not published separately &mdash; NYU overall middle 50% is SAT 1470&ndash;1570, admitted GPA avg ~3.81, worth treating as a rough proxy pending direct confirmation</td></tr>
+              <tr><td>Financial aid</td><td>Same NYU aid system as the New York and Abu Dhabi campuses</td></tr>
+              <tr><td>Aerospace fit</td><td>No dedicated Aerospace major, same as NYU Abu Dhabi</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Focus now:</strong> functionally similar profile to NYU Abu Dhabi in terms of prep &mdash; the
+            real open item is confirming Shanghai-specific admission data directly with NYU Shanghai admissions
+            rather than assuming the NYU-wide averages apply exactly.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>4. Duke Kunshan University <span class="tutoring-status-badge">CS-adjacent, dual degree</span></h2>
+          <p class="teacher-detail">Applied Mathematics and Computational Sciences (CS track) &middot; Kunshan, China &middot; dual degree: BA from Duke Kunshan + BA from Duke</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>Major structure</td><td><strong>Not a standalone CS major</strong> &mdash; "Applied Mathematics and Computational Sciences" with tracks in Computer Science and Mathematics, blending both rather than offering pure CS</td></tr>
+              <tr><td>GPA</td><td>Competitive applicants typically 3.5+</td></tr>
+              <tr><td>SAT/ACT</td><td>Optional &middot; competitive range SAT 1520&ndash;1550 / ACT 29&ndash;34 if submitted</td></tr>
+              <tr><td>Structure note</td><td>Requires a "Signature Work" capstone identified by end of sophomore year &mdash; 8 credits of one-on-one Capstone coursework with a mentor, culminating in a substantial research/creative project</td></tr>
+              <tr><td>Aerospace fit</td><td>No Aerospace major &mdash; not offered at Duke Kunshan or at Duke's Pratt School</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Focus now:</strong> worth treating as a genuine alternative only if she's comfortable with a
+            blended math+CS major rather than pure Computer Science &mdash; the Signature Work model rewards
+            self-directed research initiative, which pairs well if she's already building independent
+            projects/portfolio work for the other CS-focused schools on this app.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>5. Texas A&amp;M Qatar <span class="tutoring-status-badge">Weak fit &mdash; no CS or Aerospace</span></h2>
+          <p class="teacher-detail">Chemical, Electrical, Mechanical, and Petroleum Engineering only &middot; Doha, Qatar (Education City)</p>
+          <table class="tutoring-table">
+            <tbody>
+              <tr><td>Majors offered</td><td>Chemical Engineering, Electrical &amp; Computer Engineering, Mechanical Engineering, Petroleum Engineering &mdash; identical curriculum to College Station, ABET-accredited</td></tr>
+              <tr><td>CS fit</td><td><strong>No standalone Computer Science major</strong> &mdash; only a Computer Engineering component within Electrical Engineering</td></tr>
+              <tr><td>Aerospace fit</td><td><strong>No Aerospace Engineering</strong> &mdash; despite the main College Station campus being one of the strongest Aerospace programs in Texas, that major isn't offered at the Qatar campus</td></tr>
+              <tr><td>Cost</td><td>Qatar Foundation-subsidized, similar structure to CMU-Q &mdash; specific figures not yet researched</td></tr>
+            </tbody>
+          </table>
+          <p class="tutoring-note">
+            <strong>Focus now:</strong> included mainly for completeness given the Texas A&amp;M brand tie-in from
+            the In State tab &mdash; but this campus genuinely doesn't serve either of her two target majors. Not
+            worth active consideration unless her interests shift toward Electrical/Mechanical/Chemical/Petroleum
+            Engineering specifically.
           </p>
         </section>
       </div>
