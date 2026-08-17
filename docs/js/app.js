@@ -71,16 +71,49 @@ function wireTabs() {
 // filterable unit; elements without data-rts (Quick Comparison card
 // wrappers, the Combined Plan intro card, landscape-scan tables with no
 // per-school rating) are intentionally left alone and always stay visible.
+//
+// The pill count is meant to answer "how many schools will I see?", not
+// "how many DOM elements have this attribute?" — those aren't the same
+// number. A school with its own card ALSO appears as a row in that tab's
+// Quick Comparison table, and a divider heading isn't a school at all
+// (though the Master LAC layout's divider stands in for a whole table of
+// schools, one row each). countableRts() resolves each data-rts element
+// to how many real schools it represents for counting purposes, while
+// applyFilter() still uses every data-rts element for visibility — an
+// element that's excluded from the count can still be legitimately
+// shown/hidden by the filter.
+function countableRts(el) {
+  if (el.tagName === "H3") {
+    // A divider isn't a school by itself. If it's paired with a plain
+    // table (the Master LAC layout), it stands in for one row per school
+    // in that table; otherwise (card-group dividers) it contributes 0.
+    const next = el.nextElementSibling;
+    if (next && next.classList.contains("table-scroll")) {
+      return next.querySelectorAll("tbody tr").length;
+    }
+    return 0;
+  }
+  if (el.tagName === "TR") {
+    // Rows inside a "Quick Comparison" summary card duplicate a school
+    // that already has its own detail card below — don't count them
+    // twice.
+    const heading = el.closest("section.card")?.querySelector("h2")?.textContent || "";
+    if (heading.includes("Quick Comparison")) return 0;
+  }
+  return 1;
+}
+
 function updateFilterCounts(panel) {
-  const total = panel.querySelectorAll("[data-rts]").length;
+  const rtsEls = Array.from(panel.querySelectorAll("[data-rts]"));
+  const countFor = (filter) =>
+    rtsEls
+      .filter((el) => filter === "all" || el.dataset.rts === filter)
+      .reduce((sum, el) => sum + countableRts(el), 0);
+
   panel.querySelectorAll(".filter-pill").forEach((btn) => {
     const filter = btn.dataset.filter;
     const label = filter.charAt(0).toUpperCase() + filter.slice(1);
-    const count =
-      filter === "all"
-        ? total
-        : panel.querySelectorAll(`[data-rts="${filter}"]`).length;
-    btn.textContent = `${label} (${count})`;
+    btn.textContent = `${label} (${countFor(filter)})`;
   });
 }
 
